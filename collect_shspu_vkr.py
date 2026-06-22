@@ -193,7 +193,11 @@ async def main() -> None:
         default=Path("output/pdf/shspu_vkr"),
         help="Directory where separate VKR PDF files will be saved.",
     )
-    parser.add_argument("--fallback-html", type=Path, default=Path("search.html"))
+    parser.add_argument(
+        "--fallback-html",
+        type=Path,
+        help="Optional saved SHSPU search-result HTML to use only if the live browser fetch fails.",
+    )
     parser.add_argument(
         "--images-dir",
         type=Path,
