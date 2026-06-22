@@ -1,0 +1,1898 @@
+
+<html><head><title>ИРБИС64+ Электронная библиотека</title>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="/irbis64r_plus/css/styles.css">
+<link rel="SHORTCUT ICON" href="/irbis64r_plus/images/irbis64.ico">
+
+<link rel="stylesheet" type="text/css" href="/irbis64r_plus/js/jquery-ui.css" />
+
+<link href="/irbis64r_plus/css/sticky-footer.css" rel="stylesheet">
+
+<link href="/irbis64r_plus/js/keyboard.css" rel="stylesheet">
+
+<script type='text/javascript' src='/irbis64r_plus/js/jquery.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/jquery-ui.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/datepicker-ru.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/get_offset.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/actionSet.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/keyboard.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/RatingBar.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/SearchResultPortionLinksBar.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/IrbisRecordSet.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/WebIrbisQuery.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/WebIrbisSystem.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/WebIrbisSettings.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/WebIrbisUI.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/WebIrbisSearchField.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/SideSearchPanel.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/SortingBar.js'></script>
+<script type='text/javascript' src='/irbis64r_plus/js/authorNormalizeRule.js'></script>
+
+<script type='text/javascript' src='/irbis64r_plus/js/header_ft.js'></script>
+
+
+
+</head>
+
+<STYLE type="text/css">
+#all {
+	MIN-HEIGHT: 100%; POSITION: relative; HEIGHT: 100%
+}
+#footer {
+	LEFT: 0px; WIDTH: 100%; BOTTOM: 0px; POSITION: absolute;	HEIGHT: 30px;
+}
+#empty {
+	HEIGHT: 50px
+}
+</STYLE>
+
+
+<body>
+
+<script language="JavaScript">
+
+var HTTP_PATH = "/irbis64r_plus";
+var CGI_PATH = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe";
+
+var isAuthPage = false;
+
+</script>
+
+<script language="JavaScript">
+
+var header_rs = new IrbisRecordSet();
+
+header_rs.addRecord({
+   "MFN" : 0,
+   "FT_PARAMS" : "",
+   "DB_NAME" : "\u0056\u004B\u0052\u0031|",
+   "3335" : "",
+   "3337" : "",
+   "S21FMT" : "\u0062\u0072\u0069\u0065\u0066\u0048\u0054\u004D\u004C\u005F\u0066\u0074|",
+   "USES21ALL" : "\u0031|",
+   "S21ALL" : "\u0028\u003C\u002E\u003E\u004B\u003D\u041F\u0415\u0414\u0410\u0413\u041E\u0413\u0020\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u041E\u0413\u041E\u0020\u0418\u041D\u0416\u0415\u041D\u0415\u0420\u041D\u041E\u002D\u0422\u0415\u0425\u041D\u041E\u041B\u041E\u0413\u0418\u0427\u0415\u0421\u041A\u041E\u0413\u041E\u0020\u041E\u0411\u0420\u0410\u0417\u041E\u0412\u0410\u041D\u0418\u042F\u003C\u002E\u003E\u0029|",
+   "SEARCHIN" : "",
+   "FT_S21STR" : "",
+   "COM_S21STR" : "",
+   "SEARCH_STRING" : "",
+   "AVT" : "",
+   "FT_NEAR_MFN" : "",
+   "FT_DISTANCE" : "",
+   "FT_NEARLEVEL" : "",
+   "FT_CONTEXT" : "",
+   "FT_REQUEST" : "",
+   "FT_PREFIX" : "",
+   "S21CNR" : "\u0035|",
+   "S21REF" : "\u0031\u0030|",
+   "Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|",
+   "S21SRD" : "",
+   "S21SRW" : "",
+   "S21SCAN" : "",
+   "USE_TAGS_IN_SEARCH" : "",
+   "CHECK21" : "",
+   "variant_search_field_selector" : "",
+   "DAT_S21P06" : "",
+   "DAT_S21P07" : "",
+   "DP_S21P06" : "",
+   "DP_S21P07" : "",
+   "side_search_panel_info" : "",
+   "end" : ""});
+var header_rec = header_rs.getIrbisRecord(0);
+
+var checkedArray = "".split(",");
+var checkedCtrlArray_mfn = [];
+var checkedCtrlArray_ctrl = [];
+var flag_pageLoading = false;
+
+function isCheckedBook(mfn)
+{
+   return checkedArray.indexOf(mfn) != -1;
+}
+
+function showCheckedControls()
+{
+   for (var i in checkedCtrlArray_mfn)
+      checkedCtrlArray_ctrl[i].prop("checked", isCheckedBook(checkedCtrlArray_mfn[i]));
+}
+
+function depopulateCheckedControls()
+{
+   for (var i in checkedCtrlArray_mfn)
+      depopulateCheckedControl(checkedCtrlArray_mfn[i], checkedCtrlArray_ctrl[i].prop("checked"));
+}
+
+function depopulateCheckedControl(mfn, checked)
+{
+   var i = checkedArray.indexOf(mfn);
+   if (checked)
+   {
+      if (i == -1)
+         checkedArray.push(mfn);
+   }
+   else
+   {
+      if (i != -1)
+         checkedArray.splice(i, 1);
+   }
+}
+
+function serializeCheckedControls()
+{
+   depopulateCheckedControls();
+   
+   return checkedArray.join();
+}
+
+function checkedControlsCount()
+{
+   return checkedArray.length - 1;
+}
+
+var srrs_FULLTEXT = new IrbisRecordSet();
+var srrs_FULLTEXT_SELECTED = new IrbisRecordSet();
+var srrs_VKR1_FULLTEXT = srrs_FULLTEXT;
+var srrs_VKR1_FULLTEXT_SELECTED = srrs_FULLTEXT_SELECTED;
+function srShowResult_FULLTEXT()
+{
+   srShowResult(arguments[0], arguments[1], "VKR1_FULLTEXT");
+}
+
+function srShowResult_FULLTEXT_SELECTED()
+{
+   srShowResult(arguments[0], arguments[1], "VKR1_FULLTEXT_SELECTED");
+}
+
+var auto_open_first_text = undefined;
+
+$(function()
+   {
+      srrs_FULLTEXT.applyEachRecord(srShowResult_FULLTEXT);
+		if ((auto_open_first_text !== undefined) && ("" != ""))
+			auto_open_first_text();
+      flag_pageLoading = true;
+   });
+   
+</script>
+
+<div id="ctrl_userCard_browserWindow_holder" style="display: none; position: fixed; left: 0px; top: 0px; width: 100%;"></div>
+
+<div id="ctrl_userCard_browserWindow" style="display: none"></div>
+
+
+<!div id="all">
+
+<table width=100%><tr><td>
+
+<div align="center">
+<div class="topcell">
+<table width="100%" border="0"><tr><td width="200px">
+<div class="topcelltext" style="padding-left:3px">
+   <strong>Ирбис64+</strong>
+</div></td>
+
+
+<td align="right">
+<div class="topcelltext" style="padding-right:3px">
+<div align="right">
+
+
+
+<a id="ctrl_togglePersonalPanel_text" style="cursor: pointer;text-decoration: none;"  href=#     title="Формуляр читателя" onclick="togglePersonalPanel();">Формуляр читателя </a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a style="cursor: pointer;text-decoration: none;" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=F&I21DBN=STATI_FULLTEXT&P21DBN=STATI&Z21ID=">Выход</a>
+
+</div></div>
+</td></tr>
+</table></div></div>
+
+
+<table width=100% border=0>
+<tr>
+<td>
+
+<div align="center" style="padding-top:20px">
+
+<img src="/irbis64r_plus/images/irbis.gif">
+<br>
+
+<img src="/irbis64r_plus/images/eb.gif">
+
+
+</div>
+
+</td>
+
+<td>
+
+
+
+<script language="JavaScript">
+
+	function DropDownA(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none")
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+
+         if ("true" != "")
+         {
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_userLiterature_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=F&I21DBN=RDR&Z21ID=10151710151016115155532&P21DBN=VKR1";
+                     browseURL(url, "Литература на руках");
+                  };
+               });
+
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_searchQueries_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=F&I21DBN=ZAPR&Z21ID=10151710151016115155532&P21DBN=VKR1" + "&block_cache=" + Math.random() + "&";
+                     browseURL(url, "Мои запросы");
+                  };
+               });
+
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_userRequests_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     orderLst_deleteCtrlName = new Array();
+                     orderLst_deleteUrl = new Array();
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=S&S21ALL=<.>I=$<.>&I21DBN=RQST&S21SCAN=basket&S21SCAN_FULL=1&S21FMT=RQST_WEB&Z21ID=10151710151016115155532&P21DBN=VKR1";
+                     browseURL(url, "Корзина заказов. Эта фунция недоступна", orderLst_setEvents);
+                  };
+               });
+
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_history_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     orderLst_deleteCtrlName = new Array();
+                     orderLst_deleteUrl = new Array();
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=F&I21DBN=RDR_HISTORY&Z21ID=10151710151016115155532&P21DBN=VKR1";
+                     browseURL(url, "История", orderLst_setEvents);
+                  };
+               });
+
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_zakladki_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     orderLst_deleteCtrlName = new Array();
+                     orderLst_deleteUrl = new Array();
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=F&I21DBN=RDR_ZAKLADKI&Z21ID=10151710151016115155532&P21DBN=VKR1";
+                     browseURL(url, "Закладки", orderLst_setEvents);
+                  };
+               });
+
+
+            window_onload_actions.addAction(function ()
+               {
+                  var ui_ctrl = document.getElementById("ctrl_rec_Button");
+                  
+                  if (ui_ctrl == null) return;
+                  
+                  ui_ctrl.onclick = function () {
+                     orderLst_deleteCtrlName = new Array();
+                     orderLst_deleteUrl = new Array();
+                     var url = "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&C21COM=F&I21DBN=IBIS_REC&Z21ID=10151710151016115155532&P21DBN=VKR1";
+                     browseURL(url, "Загрузить текст в ЭБ", orderLst_setEvents);
+                  };
+               });
+
+
+
+         }
+
+var isPersonalPanelOn = true;
+
+function togglePersonalPanel()
+{
+   isPersonalPanelOn = !isPersonalPanelOn;
+   
+   showPersonalPanelPanel();
+   
+   setTogglePersonalPanelTitle();
+}
+
+function setTogglePersonalPanelTitle()
+{
+   var title = (!isPersonalPanelOn ? "Открыть формуляр читателя" : "Закрыть формуляр читателя");
+   $("#ctrl_togglePersonalPanel_text").attr( "title", title);
+}
+
+function showPersonalPanelPanel()
+{
+   $("#ParamAuthor").css("display", (isPersonalPanelOn ? "block" : "none"));
+   
+   document.SEARCH.isPersonalPanelOn.value = (isPersonalPanelOn ? "1" : "0");
+}
+
+window_onload_actions.addAction(setTogglePersonalPanelTitle);
+window_onload_actions.addAction(showPersonalPanelPanel);
+
+</script>
+
+
+<div id="ParamAuthor" style="display:block">
+
+<fieldset>
+
+<legend style="font-size:10pt;font-weight:bold;color:#ff9900">
+Читатель
+</legend>
+				
+
+<div style="margin:5px;text-align:left;font-weight:bold;font-size:8pt;">
+
+<table class=advanced><tr><td>
+Аксарин<br>Илья<br>Николаевич</td><td>
+</td></tr></table>
+
+<hr>
+
+<div id="ctrl_userLiterature_Button"><span style="color: blue; cursor: pointer;">Литература на руках</span></div><div id="ctrl_history_Button"><span style="color: blue; cursor: pointer;">История</span></div>
+
+<div id="ctrl_zakladki_Button"><span style="color: blue; cursor: pointer;">Закладки</span></div>
+
+<div id="ctrl_userRequests_Button"><span style="color: blue; cursor: pointer;">Корзина заказов</span></div><div id="ctrl_searchQueries_Button"><span style="color: blue; cursor: pointer;">Мои запросы</span></div><div id="ctrl_rec_Button"></div>
+
+
+
+
+</div>
+</fieldset>
+
+</div>
+</div>
+
+</td>
+
+</tr>
+</table>
+
+<script language="JavaScript">
+
+function DefaultParams()
+{
+   document.getElementById("S21CNR").value="5";
+   document.getElementById("FT_DISTANCE").value="";
+   //document.getElementById("FT_CONTEXT").value="0";
+   //document.getElementById("FT_NEARLEVEL").value="5";
+   return false;
+}
+
+var searchFieldArray = new Array();
+
+function addToSearchFieldArray(ui)
+{
+   searchFieldArray[searchFieldArray.length] = ui;
+}
+
+function emptySearchForm()
+{
+   document.SEARCH.SEARCH_STRING.value = '';
+	
+   emptyExtendedSearchFields();
+} 
+
+function emptyExtendedSearchFields()
+{
+   document.SEARCH.DAT_S21P06.value="";
+   document.SEARCH.DAT_S21P07.value="";
+   document.SEARCH.ctrl_DP_S21P06.value = "";
+   document.SEARCH.ctrl_DP_S21P07.value = "";
+   
+   document.SEARCH.CHECK21.checked=false;
+   
+   for (var i in searchFieldArray)
+      searchFieldArray[i].val("");
+} 
+
+function btn_ftSearchParams_click()
+{
+   $("#ctrl_ftSearchParams")
+      .dialog(
+      {
+         title: "Дополнительные параметры полнотекстового поиска",
+         modal: true,
+         width: "90%",
+         position: { my: "center top", at: "center top+5%" }
+      });
+}
+
+$(function() {
+   $("#ctrl_ftNavigatorControlPanel")
+      .dialog(
+      {
+         autoOpen: false,
+         title: "Дополнительные возможности",
+         modal: true,
+         width: "90%",
+         position: { my: "center top", at: "center top+5%" }
+      });
+});
+
+function btn_ftNavigatorControlPanel_click()
+{
+   $("#ctrl_ftNavigatorControlPanel").dialog("open");
+}
+
+	function DropDownParams(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none")
+		{
+			el1.style.display="block";
+                        document.SEARCH.FT_PARAMS.value="1";
+		}
+		else
+		{
+			el1.style.display="none";
+                        document.SEARCH.FT_PARAMS.value="";
+		}
+	}
+
+	function DropDownVid(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none")
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+
+
+
+	function DropDownUrub(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none")
+		{
+			el1.style.display="block";
+                        document.SEARCH_URUB.FT_URUB.value="1";
+		}
+		else
+		{
+			el1.style.display="none";
+                        document.SEARCH_URUB.FT_URUB.value="";
+		}
+	}
+
+
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none")
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+   
+function isNotEmptySearchForm()
+{
+   for (var i in searchFieldArray)
+      if (searchFieldArray[i].val() != "") return true;
+      
+   if (document.SEARCH.SEARCH_STRING.value != "") return true;
+   
+   if (document.SEARCH.DAT_S21P06.value != "") return true;
+   if (document.SEARCH.DAT_S21P07.value != "") return true;
+   if (document.SEARCH.DP_S21P06.value != "") return true;
+   if (document.SEARCH.DP_S21P07.value != "") return true;
+   
+   if (document.SEARCH.CHECK21.checked) return true;
+   
+   return false;
+}
+
+var isVirtualKeyboardOn = false;
+
+function changeInputMethod()
+{
+   toggleVirtualKeyboard();
+}
+
+function toggleVirtualKeyboard()
+{
+   var SEARCH_STRING_elem = document.getElementById('SEARCH_STRING');
+   var AVT_elem = document.getElementById('AVT');
+   var NAME_elem = document.getElementById('NAME_main');
+   
+   VKI_show_on_click = !isVirtualKeyboardOn;
+   
+   if (!isVirtualKeyboardOn)
+   {
+      if (!SEARCH_STRING_elem.VKI_attached)
+         VKI_attach(SEARCH_STRING_elem);
+      if (!AVT_elem.VKI_attached)
+         VKI_attach(AVT_elem);
+      if (!NAME_elem.VKI_attached)
+         VKI_attach(NAME_elem);
+   
+      setTimeout(
+         function() { VKI_show(SEARCH_STRING_elem); },
+         100);
+   }
+   else
+      VKI_close();
+   
+   isVirtualKeyboardOn = !isVirtualKeyboardOn;
+   
+   setInputMethodTitle();
+}
+
+function setInputMethodTitle()
+{
+   $("#ctrl_inputMethod").attr( "title", (isVirtualKeyboardOn ? "Закрыть виртуальную клавиатуру" : "Открыть виртуальную клавиатуру"));
+   $("#ctrl_inputMethod").css("opacity", (isVirtualKeyboardOn ? "1" : "0.5"));
+}
+
+var isExtendedSearchFieldsOn = false;
+
+function toggleExtendedSearchFields()
+{
+   isExtendedSearchFieldsOn = !isExtendedSearchFieldsOn;
+   
+   if (!isExtendedSearchFieldsOn)
+		emptyExtendedSearchFields();
+   
+   showExtendedSearchFieldsPanel();
+   
+   setToggleExtendedSearchFieldsTitle();
+}
+
+function setToggleExtendedSearchFieldsTitle()
+{
+   var title = (!isExtendedSearchFieldsOn ? "Открыть панель библиографического поиска" : "Закрыть панель библиографического поиска");
+   $("#ctrl_toggleExtendedSearchFields_text").attr( "title", title);
+   $("#ctrl_toggleExtendedSearchFields").attr( "title", title);
+   $("#ctrl_toggleExtendedSearchFields").attr("src", (isExtendedSearchFieldsOn ? "/irbis64r_plus/images/up.png" : "/irbis64r_plus/images/down.png"));
+   //$("#ctrl_toggleExtendedSearchFields").css("opacity", (isExtendedSearchFieldsOn ? "1" : "0.5"));
+}
+
+function showExtendedSearchFieldsPanel()
+{
+   $("#RestrictSearch").css("display", (isExtendedSearchFieldsOn ? "block" : "none"));
+   
+   document.SEARCH.FT_RESTRICT.value = (isExtendedSearchFieldsOn ? "1" : "");
+}
+
+window_onload_actions.addAction(setInputMethodTitle);
+window_onload_actions.addAction(setToggleExtendedSearchFieldsTitle);
+window_onload_actions.addAction(showExtendedSearchFieldsPanel);
+
+$(function() {
+   $.datepicker.setDefaults(
+      $.extend($.datepicker.regional["ru"]));
+   $( "#ctrl_DP_S21P06" ).datepicker();
+   $( "#ctrl_DP_S21P07" ).datepicker();
+   populateDateField($( "#ctrl_DP_S21P06" ), $( "#DP_S21P06" ));
+   populateDateField($( "#ctrl_DP_S21P07" ), $( "#DP_S21P07" ));
+   
+   $( "#ctrl_bibl_checkbox" ).button();
+});
+
+function populateDateField(ctrl_visible, ctrl_hidden)
+{
+   var val_yyyyMMdd = ctrl_hidden.val();
+   var val_ddMMyyyy;
+   
+   val_ddMMyyyy = convert_yyyyMMdd_to_ddMMyyyy_format(val_yyyyMMdd);
+   if (val_ddMMyyyy != "")
+   {
+      ctrl_visible.val(val_ddMMyyyy);
+      return true;
+   }
+   ctrl_visible.val("");
+}
+
+function convert_ddMMyyyy_to_yyyyMMdd_format(dateVal)
+{
+   var re = new RegExp("^(\\d{2})\\.(\\d{2})\\.(\\d{4})$");
+   if (re.test(dateVal))
+   {
+      var dateArray = re.exec(dateVal);
+      return dateArray[3] + dateArray[2] + dateArray[1];
+   }
+   return "";
+}
+
+function convert_yyyyMMdd_to_ddMMyyyy_format(dateVal)
+{
+   var re = new RegExp("^(\\d{4})(\\d{2})(\\d{2})$");
+   if (re.test(dateVal))
+   {
+      var dateArray = re.exec(dateVal);
+      return dateArray[3] + "." + dateArray[2] + "." + dateArray[1];
+   }
+   return "";
+}
+
+function depopulateDateField(ctrl_visible, ctrl_hidden)
+{
+   var val_yyyyMMdd;
+   var val_ddMMyyyy = ctrl_visible.val();
+   
+   if (val_ddMMyyyy.trim() == "")
+   {
+      ctrl_hidden.val("");
+      return true;
+   }
+   
+   val_yyyyMMdd = convert_ddMMyyyy_to_yyyyMMdd_format(val_ddMMyyyy);
+   if (val_yyyyMMdd != "")
+   {
+      ctrl_hidden.val(val_yyyyMMdd);
+      return true;
+   }
+   
+   alert("Неверное значение даты. Значение должно соответствовать формату ДД.ММ.ГГГГ");
+   ctrl_visible.focus();
+   return false;
+}
+
+function conjunct_s21all(expression)
+{
+	if (expression.trim() == "") return;
+	
+	if (document.SEARCH.S21ALL.value == "")
+		document.SEARCH.S21ALL.value = expression;
+	else
+		document.SEARCH.S21ALL.value += "*" + expression;
+}
+
+function onSearchFormSubmit()
+{
+	document.SEARCH.S21ALL.value = "";
+	
+	//////////////////////////////////////////////////////////
+	// Реализация поиска по автору со множественной нормализацией
+	//////////////////////////////////////////////////////////
+	conjunct_s21all(normalize_author_multiple($("#AVT").val()));
+	
+	//////////////////////////////////////////////////////////
+	// Реализация поиска по автору с нормализацией или поиском с квалификацией по 700 полю (в случае неудачной нормализации)
+	//////////////////////////////////////////////////////////
+	//if (is_normalizable_author_expression(sf_AVT.get_ui().val()))
+	//{
+	//	// Нормализуем значение данных об авторе
+	//	sf_AVT.get_ui().val(normalize_author(sf_AVT.get_ui().val()));
+	//}
+	//sf_AVT_setCgiParams();
+	
+   $("#AT_FORM_FT_DISTANCE").val($("#FT_DISTANCE").val());
+   $("#AT_FORM_S21CNR").val($("#S21CNR").val());
+   if (!depopulateDateField($( "#ctrl_DP_S21P06" ), $( "#DP_S21P06" )))
+      return false;
+   if (!depopulateDateField($( "#ctrl_DP_S21P07" ), $( "#DP_S21P07" )))
+      return false;
+   
+   if (!document.SEARCH.SEARCHIN.checked)
+   {
+      document.SEARCH.FT_REQUEST.value = "";
+      document.SEARCH.FT_S21STR.value = document.SEARCH.SEARCH_STRING.value;
+   } 
+   else
+   {
+      if (document.SEARCH.FT_S21STR.value !="")
+      {
+         if (document.SEARCH.FT_S21STR.value.indexOf(document.SEARCH.SEARCH_STRING.value) == -1)
+            document.SEARCH.FT_S21STR.value = document.SEARCH.FT_S21STR.value + " " + document.SEARCH.SEARCH_STRING.value;
+         else
+            return false;
+      }
+      else
+         document.SEARCH.FT_S21STR.value = document.SEARCH.SEARCH_STRING.value;
+   }
+	
+	sf_NAME.fillS21STR();
+	sf_A1.fillS21STR();
+	sf_A34.fillS21STR();
+	sf_VAR.fillS21STR();
+
+	if (document.SEARCH.CHECK21.checked)
+		conjunct_s21all("<.>V=FT<.>");
+
+   $("#CHECKINDEX").val(serializeCheckedControls());
+	
+   return isNotEmptySearchForm();
+}
+
+</script>
+
+<div id="ctrl_ftSearchParams" style="display:none">
+   <table width="100%">
+   <tr>
+      <td>
+         <input name=param type=submit onclick="return DefaultParams()" value="По умолчанию">
+      </td>
+      <td>
+         <div style="text-align : right;font-size:11px;font-family:sans-serif;">Расстояние между словами:</div>
+      </td>
+      <td>
+         <div style="text-align : left;font-size:11px;font-family:sans-serif;">
+            <select id="FT_DISTANCE" name="FT_DISTANCE" style="font-size:11px;font-family:sans-serif;">
+               <option 
+
+ selected="" 
+               value="">любое</option>
+               <option 
+
+               value="0">слова рядом</option>
+               <option
+
+               value="1">1 слово</option>
+               <option
+
+               value="2">2 слова</option>
+               <option
+
+               value="3">3 слова</option>
+               <option
+
+               value="5">5 слов </option>
+               <option
+
+               value="6">6 слов</option>
+               <option
+
+               value="7">7 слов</option>
+               <option
+
+               value="8">8 слов</option>
+               <option
+
+               value="9">9 слов</option>
+               <option
+
+               value="10">10 слов</option>
+            </select>
+         </div>
+      </td>
+      <td>
+         <div style="text-align : right;font-size:11px;font-family:sans-serif;">Выдавать по</div>
+      </td>
+      <td>
+         <div style="text-align : center;font-size:11px;font-family:sans-serif;">
+            <select style="font-size:11px;font-family:sans-serif;" name="S21CNR" id="S21CNR">
+               <option 
+
+ selected="" 
+               value="5">5</option>
+               <option 
+
+               value="10">10</option>
+               <option 
+
+               value="20">20</option>
+               <option 
+
+               value="50">50</option>
+               <option 
+
+               value="100">100</option>
+            </select>
+         </div>
+      </td>
+      <td>
+         <div style="text-align : left;font-size:11px;font-family:sans-serif;">документов</div>
+      </td>
+   </tr>
+   </table>
+</div>
+
+<div id="ctrl_ftNavigatorControlPanel" style="display:none">
+   <div style="cursor: pointer; color: blue;" onclick="setTimeout(udcLink_open, 0);">Поиск по классификатору УДК</div>
+   <br/>
+   <div style="cursor: pointer; color: blue;" onclick="new WebIrbisSystem(CGI_PATH).uc_openKO();">Формирование таблиц по книгообеспеченности</div>
+   <!--<a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?FTDBASENAME=VKR1&LNG=&C21COM=F&I21DBN=BBK&S21FMT=bbk&S21ALL=%3C.%3EU=..%3C.%3E&P21DBN=VKR1&Z21ID=<?!,v2225,?>&S21COLORTERMS=0&S21CNR=10">ББК</a>
+   <br/>
+   <a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=F&I21DBN=URUB&FTDBASENAME=VKR1&S21FMT=URUB0_WN_FT&S21All=%3C.%3EU=%3C.%3E&P21DBN=VKR1&S21REF=5&S21STN=1&S21CNR=10&Z21ID=<?!,v2225,?>">РУБ</a>
+   <br/>
+   <a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=F&I21DBN=HELP&FTDBASENAME=VKR1&S21FMT=web_rub_wn&S21ALL=%3C.%3E0%3C.%3E&P21DBN=VKR1&S21CNR=10&Z21ID=<?!,v2225,?>">ГРНТИ</a>-->
+</div>
+
+<script>
+   function udcLink_open()
+   {
+      $("#ctrl_ftNavigatorControlPanel").dialog("close");
+      
+      clearBrowseHistory();
+      
+      new WebIrbisSystem(CGI_PATH).uc_navigateUDC("", "<.>U=.<.>");
+   }
+   
+   function openKO()
+   {
+      
+   }
+</script>
+
+<br>
+
+
+
+<form name="SEARCH" action="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe" enctype="Multipart/form-data" method="POST" onsubmit="return onSearchFormSubmit();">
+
+<input type="hidden" name="isPersonalPanelOn" value="">
+
+
+<input type="hidden" name="Z21ID"  id="Z21ID" value="10151710151016115155532">
+
+<div class="SearchDBList" align="center" style="display: none">
+
+</div>
+
+
+<script language="JavaScript">
+	function changeURL(select){
+		location.href=select.options[select.selectedIndex].value;
+		}
+</script>	
+<div class="SearchDBList" align="center"><table border=0 width=100% cellpadding="3" cellspacing="0"><tr><td width=120><span style="padding-left : 10px; font-weight: bold; font: bold; font-size: 13px;font-family:sans-serif;align:right;vertical-align:-4px">База данных: </span></td><td style="padding-right : 30px;"><select onchange="changeURL(this)" name="I21DBN" id="I21DBN" style="width:100%; vertical-align:-8px";padding-right:30px;><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=STATI_FULLTEXT&P21DBN=STATI&Z21ID=10151710151016115155532">Основной каталог</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=TRUD_FULLTEXT&P21DBN=TRUD&Z21ID=10151710151016115155532">Труды преподавателей ШГПУ</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=KRAEV_FULLTEXT&P21DBN=KRAEV&Z21ID=10151710151016115155532">Краеведение</option><option value="VKR1_FULLTEXT" selected="" >Выпускные квалификационные работы</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=MARS_FULLTEXT&P21DBN=MARS&Z21ID=10151710151016115155532">МАРС</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=BIBLIOCLUB_FULLTEXT&P21DBN=BIBLIOCLUB&Z21ID=10151710151016115155532">ЭБС «Университетская библиотека онлайн»</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=URAIT_FULLTEXT&P21DBN=URAIT&Z21ID=10151710151016115155532">ЭБС "Юрайт"</option><option value="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?IS_FIRST_AUTH=false&C21COM=F&I21DBN=LAN_FULLTEXT&P21DBN=LAN&Z21ID=10151710151016115155532">ЭБС "Лань"</option></select></td></tr></table></div>
+
+<div class="SearchCell" style="border-bottom : 1px solid #73A2EF;">
+
+
+
+
+
+
+
+
+<table  border=0 width="100%" background="/irbis64r_plus/images/searchbackground.gif">
+<tr>
+<td width="100%">
+
+<input type="hidden" id="CHECKINDEX" name="CHECKINDEX" value="">
+<input type="hidden" name="SEARCHIN" value="">
+<input type="hidden" name="USES21ALL" value="0">
+
+
+<table width="100%">
+<tr>
+<td>
+   <table width="100%">
+   <tr>
+      <td width="150">
+         <div style="position: relative; top: 3px;">
+            <div style="font-size : 9px;">&nbsp;</div>
+            <div style="padding-left : 10px; padding-right: 10px; font-size: 13px; font-weight: bold;">
+               Я ищу:</div>
+         </div>
+      </td>
+      <td>
+         <table cellpadding="0" width="100%">
+            <tr>
+               <td>
+                  <div style="padding-left: 10px; padding-right: 10px; font-size: 10px;">
+                     Чтобы слово было найдено в точности в том виде, как указано, заключите его в двойные кавычки. Например: <b>"Соколов"</b>
+                  </div>
+               </td>
+               <td>
+                  <img id="ctrl_inputMethod" style="width: 20px; cursor: pointer;" src="/irbis64r_plus/images/keyboard.png" onclick="changeInputMethod();">
+               </td>
+            </tr>
+         </table>
+         <input name="SEARCH_STRING" id="SEARCH_STRING" type="text" value="" style="width:100%;">
+         <input type="hidden" name="FT_REQUEST" id="FT_REQUEST" value="">
+         <input type="hidden" name="FT_S21STR" id="FT_S21STR" value="">
+         <div style="padding-left : 10px;padding-right : 10px;font-size: 10px;">
+            Предлоги, инициалы и знаки препинания можно не вводить
+         </div>
+      </td>
+      <td width="85">
+         <div align="right" style="position: relative; top: 3px;">
+            <input name="C21COM1" type="submit" style="width: 100%; font-weight: bold; font-size: 13px; font-family:sans-serif;" value="Искать">
+         </div>
+      </td>
+   </tr>
+   </table>
+
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+
+<input type="hidden" name="FT_PARAMS" id="FT_PARAMS" value="">
+
+
+<!--<!FORMAT=if v3405='' then '<div id="ParamSearch" style="display:none">' else '<div id="ParamSearch" style="display:block">' fi>-->
+
+<input type="hidden" id="AT_FORM_FT_DISTANCE" name="FT_DISTANCE">
+<input type="hidden" id="AT_FORM_S21CNR" name="S21CNR">
+
+
+
+<table width="100%">
+<tr>
+   <td>
+      <a id="ctrl_toggleExtendedSearchFields_text" style="position: relative; padding-left: 10px; cursor: pointer; color: blue; font-size: 13px; font-weight: bold; text-decoration: none;"  href="#"
+           onclick="toggleExtendedSearchFields();">
+           <span>Библиографический поиск</span>
+      </a>
+      <img id="ctrl_toggleExtendedSearchFields" style="cursor: pointer;" src="/irbis64r_plus/images/on-off.png" onclick="toggleExtendedSearchFields();">
+   </td>
+</tr>
+</table>
+
+<input type="hidden" name="FT_RESTRICT" id="FT_RESTRICT" value="">
+
+<div id="RestrictSearch" style="display: none;">
+
+
+
+<table width="100%">
+<tr>
+   <td width="150">
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 13px; font-weight: bold;">
+         Автор</div>
+   </td>
+   <td>
+		<input name="AVT" id="AVT" type="text" style="width:100%;">
+      <!--<div id="ctrl_search_field_AVT"/>-->
+   </td>
+   <td width="85">
+   </td>
+</tr>
+<tr>
+   <td>
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 13px; font-weight: bold;">
+         Заглавие</div>
+   </td>
+   <td style="font-size:11px;font-family:sans-serif;">
+      <div id="ctrl_search_field_NAME"/>
+   </td>
+   <td width="85">
+   </td>
+</tr>
+<tr>
+   <td>
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 13px; font-weight: bold;">
+         Тематика (ГРНТИ)
+      </div>
+   </td>
+   <td style="font-size:11px;font-family:sans-serif;">
+      <div id="ctrl_search_field_A1"/>
+   </td>
+   <td width="85">
+   </td>
+</tr>
+<tr>
+   <td>
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 13px; font-weight: bold;">
+         Вид издания
+      </div>
+   </td>
+   <td style="font-size:11px;font-family:sans-serif;">
+      <div id="ctrl_search_field_A34"/>
+   </td>
+   <td width="85">
+   </td>
+</tr>
+
+
+</table>
+
+<script>
+
+var fill_select_urlencode = function(ui_select, record, is_present_void_value, selected_id, is_selected_first)
+   {
+      var id_array = record.getIrbisField_Array("id");
+      var name_array = record.getIrbisField_Array("name");
+      var options = ui_select.prop("options");
+      if (is_present_void_value)
+         options[options.length] = new Option("", "");
+      for (var i = 1; i < id_array.length; i++)
+      {
+         var id = encodeURIComponent(decodeURIComponent(decodeURIComponent(id_array[i])));
+         
+         if (is_selected_first && (i == 1))
+            selected_id = id;
+         options[options.length] = new Option(name_array[i], id);
+      }
+      ui_select.val(selected_id);
+   };
+
+var fill_select = function(ui_select, record, selected_id)
+   {
+      var id_array = record.getIrbisField_Array("id");
+      var name_array = record.getIrbisField_Array("name");
+      var options = ui_select.prop("options");
+      for (var i = 0; i < id_array.length; i++)
+         options[options.length] = new Option(name_array[i], id_array[i]);
+      ui_select.val(selected_id);
+   };
+
+var author_prefix = "A=";
+var keywords_prefix="K=";
+/*var sf_AVT_setCgiParams = function()
+	{
+		if (is_normalizable_author_expression(sf_AVT.get_ui().val()))
+		{
+			sf_AVT.setCgiParam("S21P01", "");
+			sf_AVT.setCgiParam("S21P02", "1");
+			sf_AVT.setCgiParam("S21P03", author_prefix);
+			sf_AVT.setCgiParam("S21P04", "");
+			sf_AVT.setCgiParam("S21LOG", "1");
+		}
+		else
+		{
+			sf_AVT.setCgiParam("S21P01", "1");
+			sf_AVT.setCgiParam("S21P02", "0");
+			sf_AVT.setCgiParam("S21P03", keywords_prefix);
+			sf_AVT.setCgiParam("S21P04", "700");
+			sf_AVT.setCgiParam("S21LOG", "1");
+		}
+	};*/
+
+$(
+   function ()
+   {
+      var rs;
+      
+      var Z21ID = $("input[name=Z21ID]").val();
+      var P21DBN = $("input[name=P21DBN]").val();
+      var S21P03;
+      var search_field_value;
+
+		$("#AVT").val(header_rec.getIrbisField_First("AVT"));
+		setAutoComplete($("#AVT"), "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe", Z21ID, P21DBN, author_prefix, "wholeQuery");
+		addToSearchFieldArray($("#AVT"));
+      //sf_AVT = new WebIrbisSearchField($("#ctrl_search_field_AVT"), "A_", "")
+		//sf_AVT.addCgiParam("S21P01", "");
+		//sf_AVT.addCgiParam("S21P02", "")
+      //sf_AVT.addCgiParam("S21P03", "")
+      //sf_AVT.addCgiParam("S21P04", "");
+      //sf_AVT.addCgiParam("S21LOG", "")
+		//sf_AVT_setCgiParams();
+      //sf_AVT.setAutoComplete("/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe", Z21ID, P21DBN, author_prefix, "wholeQuery");
+      //sf_AVT.get_ui().css("width", "100%");
+      
+      S21P03 = "T=";
+      sf_NAME = new WebIrbisSearchField($("#ctrl_search_field_NAME"), "NAME_", "")
+         .addCgiParam("S21P02", "1")
+         .addCgiParam("S21P03", S21P03)
+         .addCgiParam("S21LOG", "1")
+         .setAutoComplete("/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe", Z21ID, P21DBN, S21P03, "wholeQuery");
+      sf_NAME.get_ui().css("width", "100%");
+		addToSearchFieldArray(sf_NAME.get_ui());
+      
+      S21P03 = "V=";
+      search_field_value = "";
+      sf_A34 = new WebIrbisSearchField($("#ctrl_search_field_A34"), "A34_", search_field_value, "select")
+         .addCgiParam("S21P01", "2")
+         .addCgiParam("S21P03", S21P03);
+      sf_A34.get_ui().css("width", "100%");
+		addToSearchFieldArray(sf_A34.get_ui());
+      
+      rs_vd = new IrbisRecordSet();
+      rs_vd.addRecord({
+         "MFN" : 1,
+         "id" : "|\u004B\u004E|\u0030\u0034|\u0030\u0037|\u0030\u0031|\u0030\u0032|\u004E\u004A|\u0041\u0053|\u0055\u0044|\u007A\u0062|\u007A\u0065|\u007A\u0063|\u007A\u0069|\u007A\u0067|\u007A\u006C|\u007A\u006B|\u007A\u0072|\u004D\u0055\u0053\u0050|\u007A\u006C|",
+         "name" : "|\u041A\u043D\u0438\u0433\u0438\u0020\u0432\u0020\u0446\u0435\u043B\u043E\u043C|\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u044E\u0449\u0435\u0435\u0441\u044F\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u041C\u043E\u043D\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0441\u0435\u0440\u0438\u044F|\u0413\u0430\u0437\u0435\u0442\u0430\u0020\u0028\u043E\u0431\u0449\u0435\u0435\u0020\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435\u0029|\u0416\u0443\u0440\u043D\u0430\u043B\u0020\u0028\u043E\u0431\u0449\u0435\u0435\u0020\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435\u0029|\u041E\u0442\u0434\u0435\u043B\u044C\u043D\u044B\u0439\u0020\u043D\u043E\u043C\u0435\u0440\u0020\u0433\u0430\u0437\u0435\u0442\u044B\u0020\u0438\u043B\u0438\u0020\u0436\u0443\u0440\u043D\u0430\u043B\u0430|\u0421\u0442\u0430\u0442\u044C\u044F|\u042E\u0440\u0438\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442|\u0420\u0443\u043A\u043E\u043F\u0438\u0441\u044C\u0020\u0028\u0442\u0435\u043A\u0441\u0442\u043E\u0432\u044B\u0435\u0020\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B\u0029|\u041A\u0430\u0440\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B|\u041D\u043E\u0442\u044B\u0020\u0028\u043C\u0443\u0437\u044B\u043A\u0430\u043B\u044C\u043D\u044B\u0435\u0020\u043F\u0430\u0440\u0442\u0438\u0442\u0443\u0440\u044B\u0029|\u0417\u0432\u0443\u043A\u043E\u0437\u0430\u043F\u0438\u0441\u0438|\u041A\u0438\u043D\u043E\u0444\u0438\u043B\u044C\u043C\u044B\u002C\u0020\u043F\u0440\u043E\u0435\u043A\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0438\u0020\u0432\u0438\u0434\u0435\u043E\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B|\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435\u0020\u0444\u0430\u0439\u043B\u044B|\u0032\u0445\u002D\u043C\u0435\u0440\u043D\u0430\u044F\u0020\u0433\u0440\u0430\u0444\u0438\u043A\u0430\u0020\u0028\u0438\u043B\u043B\u044E\u0441\u0442\u0440\u002E\u002C\u0020\u0447\u0435\u0440\u0442\u0435\u0436\u0438\u0020\u0438\u0020\u0434\u0440\u002E\u0029|\u0033\u0445\u002D\u043C\u0435\u0440\u043D\u044B\u0435\u0020\u0438\u0441\u043A\u0443\u0441\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435\u0020\u043E\u0431\u044A\u0435\u043A\u0442\u044B\u0020\u0438\u0020\u0440\u0435\u0430\u043B\u0438\u0438|\u041C\u0443\u0437\u0435\u0439\u043D\u044B\u0439\u0020\u043F\u0440\u0435\u0434\u043C\u0435\u0442|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u044B\u0439\u0020\u0440\u0435\u0441\u0443\u0440\u0441|",
+         "end" : ""});
+      fill_select(sf_A34.get_ui(), rs_vd.getIrbisRecord(1), search_field_value);
+      
+      S21P03 = "R=";
+      search_field_value = "";
+      sf_A1 = new WebIrbisSearchField($("#ctrl_search_field_A1"), "A1_", search_field_value, "select")
+         .addCgiParam("S21P01", "2")
+         .addCgiParam("S21P03", S21P03);
+      sf_A1.get_ui().css("width", "100%");
+		addToSearchFieldArray(sf_A1.get_ui());
+      
+      rs_subj = new IrbisRecordSet();
+      rs_subj.addRecord({
+         "MFN" : 1,
+         "id" : "|",
+         "name" : "|",
+         "end" : ""});
+      fill_select(sf_A1.get_ui(), rs_subj.getIrbisRecord(1), search_field_value);
+      
+      var ui_variant_search_field_selector = $("#variant_search_field_selector");
+      
+      var selected_id = encodeURIComponent(decodeURIComponent(decodeURIComponent("")));
+      
+      rs = new IrbisRecordSet();
+      rs.addRecord({
+         "MFN" : 1,
+         "id" : "|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u0043\u004F\u004C\u004C\u0054\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u0043\u004F\u004C\u004C\u0054\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u0048\u0044\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u0048\u0044\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0030\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0030\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0034\u003D\u0031\u0032\u0030\u0030\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0034\u003D\u0031\u0032\u0030\u0030\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0034\u003D\u0031\u0032\u0030\u0030\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0065\u0078\u0074\u0072\u0061\u0063\u0074\u004C\u0061\u0073\u0074\u0057\u006F\u0072\u0064\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004F\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0031\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0077\u0068\u006F\u006C\u0065\u0051\u0075\u0065\u0072\u0079\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0069\u006E\u0070\u0075\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0032\u003D\u0031\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004D\u003D\u0026\u0053\u0032\u0031\u004C\u004F\u0047\u003D\u0031\u0022\u002C\u0020\u0022\u0061\u0075\u0074\u006F\u0063\u006F\u006D\u0070\u006C\u0065\u0074\u0065\u0054\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0077\u0068\u006F\u006C\u0065\u0051\u0075\u0065\u0072\u0079\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u0049\u0044\u0044\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u0064\u0069\u0073\u0063\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u0053\u0050\u0045\u0043\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u0073\u0070\u0065\u0063\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004E\u0041\u0050\u0052\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u006E\u0061\u0070\u0072\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u004B\u0041\u0046\u0043\u0048\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u006B\u0061\u0066\u0063\u0068\u002E\u006D\u006E\u0075\u0022\u0020\u007D|\u007B\u0020\u0022\u0066\u0069\u0065\u006C\u0064\u005F\u0074\u0079\u0070\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u0065\u006C\u0065\u0063\u0074\u0022\u002C\u0020\u0022\u0070\u0061\u0072\u0061\u006D\u0065\u0074\u0065\u0072\u0073\u0022\u0020\u003A\u0020\u0022\u0053\u0032\u0031\u0050\u0030\u0031\u003D\u0032\u0026\u0053\u0032\u0031\u0050\u0030\u0033\u003D\u0046\u0041\u004B\u003D\u0022\u002C\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u0022\u0020\u003A\u0020\u0022\u0073\u006F\u0075\u0072\u0063\u0065\u005F\u006D\u006E\u0075\u003A\u0066\u0061\u006B\u002E\u006D\u006E\u0075\u0022\u0020\u007D|",
+         "name" : "|\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F|\u0425\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u0020\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0028\u041B\u042E\u0411\u041E\u0415\u0029|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0028\u0412\u0421\u0415\u0029|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0028\u0424\u0420\u0410\u0417\u0410\u0029|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0432\u0020\u0417\u0410\u0413\u041B\u0410\u0412\u0418\u0418\u0020\u0028\u041B\u042E\u0411\u041E\u0415\u0029|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0432\u0020\u0417\u0410\u0413\u041B\u0410\u0412\u0418\u0418\u0020\u0028\u0412\u0421\u0415\u0029|\u041A\u043B\u044E\u0447\u002E\u0441\u043B\u043E\u0432\u0430\u0020\u0432\u0020\u0417\u0410\u0413\u041B\u0410\u0412\u0418\u0418\u0020\u0028\u0424\u0420\u0410\u0417\u0410\u0029|\u0418\u0437\u0434\u0430\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u043E|\u041A\u043E\u043B\u043B\u0435\u043A\u0442\u0438\u0432|\u0414\u0438\u0441\u0446\u0438\u043F\u043B\u0438\u043D\u0430|\u0421\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C|\u041D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435|\u041A\u0430\u0444\u0435\u0434\u0440\u0430|\u0424\u0430\u043A\u0443\u043B\u044C\u0442\u0435\u0442|",
+         "end" : ""});
+      fill_select_urlencode(ui_variant_search_field_selector, rs.getIrbisRecord(1), false, selected_id, selected_id == "");
+      
+      var rs_variant = new IrbisRecordSet();
+      var rs_variant_rec_number = 1;
+      var variant_search_field_mnu_lst = new Object();
+                  rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0030\u0031|\u0030\u0032|\u0030\u0033|",               "name" : "|\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F\u0020\u0031|\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F\u0020\u0032|\u041A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F\u0020\u0033|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:COLLT.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0061|\u0061\u0030\u0030\u0031|\u0061\u0030\u0031\u0030|\u0061\u0030\u0032\u0030|\u0061\u0030\u0033\u0030|\u0061\u0030\u0034\u0030|\u0061\u0030\u0035\u0030|\u0061\u0030\u0036\u0030|\u0061\u0030\u0037\u0030|\u0061\u0030\u0038\u0030|\u0061\u0030\u0039\u0030|\u0061\u0031\u0030\u0030|\u0064|\u0064\u0030\u0030\u0031|\u0064\u0030\u0031\u0030|\u0064\u0030\u0032\u0030|\u0064\u0030\u0033\u0030|\u0064\u0030\u0034\u0030|\u0064\u0030\u0035\u0030|\u0064\u0030\u0036\u0030|\u0064\u0030\u0037\u0030|\u0064\u0030\u0038\u0030|\u0064\u0030\u0039\u0030|\u0068|\u0068\u0030\u0030\u0031|\u0068\u0030\u0031\u0030|\u0068\u0030\u0032\u0030|\u0068\u0030\u0033\u0030|\u0068\u0030\u0034\u0030|\u0068\u0030\u0035\u0030|\u0068\u0030\u0036\u0030|\u0068\u0030\u0037\u0030|\u006A|\u006A\u0030\u0030\u0031|\u006A\u0030\u0031\u0030|\u006A\u0030\u0032\u0030|\u006A\u0030\u0033\u0030|\u006A\u0030\u0034\u0030|\u006A\u0030\u0035\u0030|\u006A\u0030\u0036\u0030|\u006A\u0030\u0037\u0030|\u006A\u0030\u0038\u0030|\u006A\u0030\u0039\u0030|\u006A\u0031\u0030\u0030|\u006A\u0031\u0031\u0030|\u006A\u0031\u0032\u0030|\u006A\u0031\u0033\u0030|\u006A\u0031\u0034\u0030|\u006A\u0031\u0035\u0030|\u006A\u0031\u0036\u0030|\u006A\u0031\u0037\u0030|\u006A\u0031\u0038\u0030|\u006A\u0031\u0039\u0030|\u006A\u0032\u0030\u0030|\u006A\u0032\u0031\u0030|\u006A\u0032\u0032\u0030|\u0070|\u0070\u0030\u0030\u0031|\u0070\u0030\u0031\u0030|\u0070\u0030\u0032\u0030|\u0070\u0030\u0033\u0030|\u0070\u0030\u0034\u0030|\u0070\u0030\u0035\u0030|\u0070\u0030\u0036\u0030|\u0070\u0030\u0037\u0030|\u0070\u0030\u0038\u0030|\u0070\u0030\u0039\u0030|\u0070\u0031\u0030\u0030|\u0070\u0031\u0031\u0030|\u0070\u0031\u0032\u0030|\u0070\u0031\u0033\u0030|\u0070\u0031\u0034\u0030|\u0070\u0031\u0035\u0030|\u0070\u0031\u0036\u0030|\u0070\u0031\u0037\u0030|\u0070\u0031\u0038\u0030|\u0070\u0031\u0039\u0030|\u0070\u0032\u0030\u0030|\u0070\u0032\u0031\u0030|\u0073|\u0073\u0030\u0030\u0031|\u0073\u0030\u0031\u0030|\u0073\u0030\u0032\u0030|\u0073\u0030\u0033\u0030|\u0073\u0030\u0034\u0030|\u0073\u0030\u0035\u0030|\u0073\u0030\u0036\u0030|\u0073\u0030\u0037\u0030|\u0073\u0030\u0038\u0030|\u0073\u0030\u0039\u0030|\u0073\u0031\u0030\u0030|\u0073\u0031\u0031\u0030|\u0073\u0031\u0032\u0030|\u007A|\u007A\u0030\u0030\u0031|\u007A\u0030\u0031\u0030|\u007A\u0030\u0032\u0030|\u007A\u0030\u0033\u0030|\u007A\u0030\u0034\u0030|\u007A\u0030\u0035\u0030|\u007A\u0030\u0036\u0030|\u007A\u0030\u0037\u0030|\u0039\u0038|",               "name" : "|\u043D\u0430\u0443\u0447\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u043D\u0430\u0443\u0447\u043D\u043E\u002D\u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0430\u0432\u0442\u043E\u0440\u0435\u0444\u0435\u0440\u0430\u0442\u0020\u0434\u0438\u0441\u0441\u0435\u0440\u0442\u0430\u0446\u0438\u0438|\u0434\u0438\u0441\u0441\u0435\u0440\u0442\u0430\u0446\u0438\u044F|\u0434\u043E\u043A\u043B\u0430\u0434|\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B\u0020\u043A\u043E\u043D\u0444\u0435\u0440\u0435\u043D\u0446\u0438\u0438|\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B\u0020\u0441\u0438\u043C\u043F\u043E\u0437\u0438\u0443\u043C\u0430|\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B\u0020\u0441\u044A\u0435\u0437\u0434\u0430|\u043C\u043E\u043D\u043E\u0433\u0440\u0430\u0444\u0438\u044F|\u043F\u0440\u0435\u043F\u0440\u0438\u043D\u0442|\u0441\u0431\u043E\u0440\u043D\u0438\u043A\u0020\u043D\u0430\u0443\u0447\u043D\u044B\u0445\u0020\u0442\u0440\u0443\u0434\u043E\u0432|\u0442\u0435\u0437\u0438\u0441\u044B\u0020\u0434\u043E\u043A\u043B\u0430\u0434\u043E\u0432|\u043E\u0444\u0438\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u043D\u0430\u0443\u0447\u043D\u043E\u002D\u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0434\u043E\u0433\u043E\u0432\u043E\u0440|\u0437\u0430\u043A\u043E\u043D|\u0437\u0430\u043A\u043E\u043D\u043E\u0434\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439\u0020\u0430\u043A\u0442|\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F|\u043F\u0430\u0442\u0435\u043D\u0442|\u043F\u0440\u0435\u0439\u0441\u043A\u0443\u0440\u0430\u043D\u0442|\u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E|\u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442|\u0443\u0441\u0442\u0430\u0432|\u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u002D\u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0438\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u0438\u0432\u043D\u043E\u002D\u043C\u0435\u0442\u043E\u0434\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u043C\u0435\u0442\u043E\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u044B|\u043C\u0435\u0442\u043E\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u0440\u0435\u043A\u043E\u043C\u0435\u043D\u0434\u0430\u0446\u0438\u0438|\u043D\u043E\u043C\u0435\u043D\u043A\u043B\u0430\u0442\u0443\u0440\u043D\u044B\u0439\u0020\u043A\u0430\u0442\u0430\u043B\u043E\u0433|\u043F\u0430\u043C\u044F\u0442\u043A\u0430|\u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u043F\u043E\u0441\u043E\u0431\u0438\u0435|\u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u0440\u0443\u043A\u043E\u0432\u043E\u0434\u0441\u0442\u0432\u043E|\u043F\u0440\u043E\u043C\u044B\u0448\u043B\u0435\u043D\u043D\u044B\u0439\u0020\u043A\u0430\u0442\u0430\u043B\u043E\u0433|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0423\u0427\u041B\u0020\u002D\u0020\u0431\u0443\u043A\u0432\u0430\u0440\u044C|\u0423\u0427\u041B\u0020\u002D\u0020\u0432\u044B\u043F\u0443\u0441\u043A\u043D\u0430\u044F\u0020\u043A\u0432\u0430\u043B\u0438\u0444\u0438\u043A\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u0437\u0430\u0434\u0430\u0447\u043D\u0438\u043A|\u0423\u0427\u041B\u0020\u002D\u0020\u043A\u043E\u043D\u0442\u0440\u043E\u043B\u044C\u043D\u0430\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u043A\u0443\u0440\u0441\u0020\u043B\u0435\u043A\u0446\u0438\u0439|\u0423\u0427\u041B\u0020\u002D\u0020\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u043A\u0443\u0440\u0441\u043E\u0432\u043E\u0439\u0020\u0440\u0430\u0441\u0447\u0435\u0442|\u0423\u0427\u041B\u0020\u002D\u0020\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u0430\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u043F\u043B\u0430\u043D\u044B\u0020\u0441\u0435\u043C\u0438\u043D\u0430\u0440\u0441\u043A\u0438\u0445\u0020\u0437\u0430\u043D\u044F\u0442\u0438\u0439|\u0423\u0427\u041B\u0020\u002D\u0020\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0443\u043C|\u0423\u0427\u041B\u0020\u002D\u0020\u043F\u0440\u0430\u043A\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0440\u0430\u0431\u043E\u0442\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u0440\u0430\u0431\u043E\u0447\u0430\u044F\u0020\u0442\u0435\u0442\u0440\u0430\u0434\u044C|\u0423\u0427\u041B\u0020\u002D\u0020\u0441\u0430\u043C\u043E\u0443\u0447\u0438\u0442\u0435\u043B\u044C|\u0423\u0427\u041B\u0020\u002D\u0020\u0441\u0431\u043E\u0440\u043D\u0438\u043A\u0020\u0437\u0430\u0434\u0430\u0447|\u0423\u0427\u041B\u0020\u002D\u0020\u0442\u0435\u0441\u0442\u044B|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u0430\u044F\u0020\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u0438\u043A|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u043E\u0435\u0020\u043F\u043E\u0441\u043E\u0431\u0438\u0435|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u043E\u0435\u0020\u043D\u0430\u0433\u043B\u044F\u0434\u043D\u043E\u0435\u0020\u043F\u043E\u0441\u043E\u0431\u0438\u0435|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u043E\u002D\u043C\u0435\u0442\u043E\u0434\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u043F\u043E\u0441\u043E\u0431\u0438\u0435|\u0423\u0427\u041B\u0020\u002D\u0020\u0443\u0447\u0435\u0431\u043D\u044B\u0439\u0020\u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0442|\u0423\u0427\u041B\u0020\u002D\u0020\u0445\u0440\u0435\u0441\u0442\u043E\u043C\u0430\u0442\u0438\u044F|\u0423\u0427\u041B\u0020\u002D\u0020\u044D\u043A\u0437\u0430\u043C\u0435\u043D\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439\u0020\u043B\u0438\u0441\u0442|\u0441\u043F\u0440\u0430\u0432\u043E\u0447\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0440\u0435\u043A\u043B\u0430\u043C\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0430\u0434\u0440\u0435\u0441\u043D\u0430\u044F\u0020\u043A\u043D\u0438\u0433\u0430|\u0430\u0444\u0438\u0448\u0430|\u0431\u0438\u043E\u0431\u0438\u0431\u043B\u0438\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043F\u0440\u0430\u0432\u043E\u0447\u043D\u0438\u043A|\u0431\u0438\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043F\u0440\u0430\u0432\u043E\u0447\u043D\u0438\u043A|\u043A\u0430\u0442\u0430\u043B\u043E\u0433|\u043E\u0440\u0444\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u043E\u0440\u0444\u043E\u044D\u043F\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u043F\u0435\u0440\u0435\u0432\u043E\u0434\u043D\u043E\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u043F\u0440\u043E\u0441\u043F\u0435\u043A\u0442|\u043F\u0443\u0442\u0435\u0432\u043E\u0434\u0438\u0442\u0435\u043B\u044C|\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440\u043D\u0438\u043A|\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u0441\u043B\u043E\u0432\u0430\u0440\u044C\u002D\u0441\u043F\u0440\u0430\u0432\u043E\u0447\u043D\u0438\u043A|\u0442\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u0430\u044F\u0020\u043A\u043D\u0438\u0433\u0430|\u0441\u043F\u0440\u0430\u0432\u043E\u0447\u043D\u0438\u043A|\u0442\u0435\u0440\u043C\u0438\u043D\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u0442\u043E\u043B\u043A\u043E\u0432\u044B\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u0447\u0430\u0441\u0442\u043E\u0442\u043D\u044B\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u044D\u043D\u0446\u0438\u043A\u043B\u043E\u043F\u0435\u0434\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u044D\u043D\u0446\u0438\u043A\u043B\u043E\u043F\u0435\u0434\u0438\u044F|\u044F\u0437\u044B\u043A\u043E\u0432\u044B\u0439\u0020\u0441\u043B\u043E\u0432\u0430\u0440\u044C|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u002D\u0445\u0443\u0434\u043E\u0436\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u0430\u043B\u044C\u043C\u0430\u043D\u0430\u0445|\u0430\u043D\u0442\u043E\u043B\u043E\u0433\u0438\u044F|\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u043B\u044C\u043D\u043E\u002D\u0445\u0443\u0434\u043E\u0436\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u0430\u044F\u0020\u043A\u0440\u0438\u0442\u0438\u043A\u0430|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0020\u002D\u0020\u0434\u0440\u0430\u043C\u0430|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0020\u002D\u0020\u043F\u0440\u043E\u0437\u0430|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0020\u002D\u0020\u043F\u043E\u044D\u0437\u0438\u044F|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0020\u002D\u0020\u0441\u043A\u0430\u0437\u043A\u0438|\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u043D\u043E\u0435\u0020\u043F\u0440\u043E\u0438\u0437\u0432\u0435\u0434\u0435\u043D\u0438\u0435\u0020\u002D\u0020\u044E\u043C\u043E\u0440\u002C\u0020\u0441\u0430\u0442\u0438\u0440\u0430|\u043D\u0430\u0443\u0447\u043D\u043E\u002D\u0445\u0443\u0434\u043E\u0436\u0435\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0435\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u0435|\u043F\u0435\u0441\u0435\u043D\u043D\u0438\u043A|\u043F\u0438\u0441\u044C\u043C\u0430|\u0434\u0440\u0443\u0433\u043E\u0435|\u0431\u0438\u0431\u043B\u0438\u043E\u0433\u0440\u0430\u0444\u0438\u044F|\u0435\u0436\u0435\u0433\u043E\u0434\u043D\u0438\u043A|\u043A\u0430\u043B\u0435\u043D\u0434\u0430\u0440\u044C|\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u0020\u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u043E\u0439\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438|\u043D\u0435\u043E\u043F\u0443\u0431\u043B\u0438\u043A\u043E\u0432\u0430\u043D\u043D\u044B\u0439\u0020\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442|\u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u0435\u043B\u044C|\u0440\u0435\u0434\u043A\u0430\u044F\u0020\u043A\u043D\u0438\u0433\u0430|\u0441\u0442\u0430\u0440\u043E\u043F\u0435\u0447\u0430\u0442\u043D\u0430\u044F\u0020\u043A\u043D\u0438\u0433\u0430|\u0431\u0440\u043E\u0448\u044E\u0440\u0430|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:HD.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0410\u0420\u0425\u0412\u0421|\u0410\u0420\u0425\u041A\u041E\u041C|\u0410\u0421\u0422\u0420|\u0411\u0418\u041E\u0421\u0425|\u0411\u0418\u041E\u0422\u0415\u0425\u041D|\u0411\u0418\u041E\u0425\u0418\u041C|\u0411\u041E\u0422|\u0413\u0415\u041D|\u0414\u041E\u0428\u041F\u0415\u0414|\u0418\u041D\u0424\u002D\u041E\u041F\u0414\u0031|\u0418\u041D\u0424\u0421\u0418\u0421\u0422|\u0418\u0441\u0442\u043E\u0440\u0032\u0030\u0030|\u041A\u0412\u0424|\u041A\u041E\u041C\u041F\u041C\u041E\u0414|\u041C\u0410\u0422\u0410\u041D|\u041C\u0415\u041D\u0414\u0416|\u041C\u0415\u0422\u041F\u0421\u0418\u0425|\u041C\u041E\u041B\u0424|\u041C\u0423\u041B\u042C\u0422\u0422\u0415\u0425|\u043E\u043F\u0434\u002E\u0031\u0030\u0035|\u041E\u0420\u0413\u0425\u0418\u041C|\u041F\u0421\u0418\u0413\u0420|\u041F\u0421\u0418\u041B\u0418\u0427\u041D|\u041F\u0421\u0418\u041F\u0415\u0414|\u041F\u0421\u0418\u041F\u0420\u041E\u0424|\u0421\u0410\u041C\u041F\u041E\u0417\u041D|\u0421\u0415\u041D\u0415\u0420|\u0421\u0422\u0410\u0422\u0424|\u0421\u0422\u041E\u0422\u041D|\u0422\u0415\u041E\u0420\u0418\u041D\u0424|\u0422\u0415\u041E\u0420\u0424|\u0422\u0415\u041E\u0420\u0425\u0418\u041C|\u0424\u0418\u0417\u0418\u041E\u041B|\u0424\u0418\u0417\u041C\u0418\u0420|\u0424\u0418\u0417\u0422\u0422|\u0424\u0418\u041D\u041A\u0420|\u0425\u0418\u041C\u0422\u0415\u0425\u041D|\u0425\u0422\u0415\u0425|\u042D\u041A\u041E\u0411\u0420|\u042D\u041A\u041E\u041B|\u042D\u041A\u041E\u041F\u0420|\u042D\u041A\u041E\u0422\u0420|\u042D\u041B\u0414\u0418\u041D|\u042D\u041B\u0422\u0415\u0425|\u042F\u0417\u041F\u0420\u041E\u0413|",               "name" : "|\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430\u0020\u0432\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0445\u0020\u0441\u0438\u0441\u0442\u0435\u043C|\u0410\u0440\u0445\u0438\u0442\u0435\u043A\u0442\u0443\u0440\u0430\u0020\u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u0430|\u0410\u0441\u0442\u0440\u043E\u0444\u0438\u0437\u0438\u043A\u0430|\u0411\u0438\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043E\u0441\u043D\u043E\u0432\u044B\u0020\u0441\u0435\u043B\u044C\u0441\u043A\u043E\u0433\u043E\u0020\u0445\u043E\u0437\u044F\u0439\u0441\u0442\u0432\u0430|\u0411\u0438\u043E\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\u044F|\u0411\u0438\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0445\u0438\u043C\u0438\u044F|\u0411\u043E\u0442\u0430\u043D\u0438\u043A\u0430\u0020\u0441\u0020\u043E\u0441\u043D\u043E\u0432\u0430\u043C\u0438\u0020\u0444\u0438\u0442\u043E\u0446\u0435\u043D\u043E\u043B\u043E\u0433\u0438\u0438|\u0413\u0435\u043D\u0435\u0442\u0438\u043A\u0430|\u0414\u043E\u0448\u043A\u043E\u043B\u044C\u043D\u0430\u044F\u0020\u043F\u0435\u0434\u0430\u0433\u043E\u0433\u0438\u043A\u0430|\u0412\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B\u002C\u0020\u0441\u0435\u0442\u0438\u0020\u0438\u0020\u0442\u0435\u043B\u0435\u043A\u043E\u043C\u043C\u0443\u043D\u0438\u043A\u0430\u0446\u0438\u0438\u0020\u0028\u0444\u0438\u043B\u0438\u0430\u043B\u0029|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B\u0020\u0438\u0020\u0441\u0435\u0442\u0438|\u0418\u0441\u0442\u043E\u0440\u0438\u044F\u0020\u0440\u0443\u0441\u0441\u043A\u043E\u0439\u0020\u043B\u0438\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u044B|\u041A\u0432\u0430\u043D\u0442\u043E\u0432\u0430\u044F\u0020\u0444\u0438\u0437\u0438\u043A\u0430|\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u043E\u0435\u0020\u043C\u043E\u0434\u0435\u043B\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0439\u0020\u0430\u043D\u0430\u043B\u0438\u0437|\u041C\u0435\u043D\u0435\u0434\u0436\u043C\u0435\u043D\u0442|\u041C\u0435\u0442\u043E\u0434\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u0438\u0020\u043C\u0435\u0442\u043E\u0434\u044B\u0020\u043F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u0438|\u041C\u043E\u043B\u0435\u043A\u0443\u043B\u044F\u0440\u043D\u0430\u044F\u0020\u0444\u0438\u0437\u0438\u043A\u0430|\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435\u0020\u0441\u0435\u0442\u0438\u002C\u0020\u0438\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0020\u0438\u0020\u043C\u0443\u043B\u044C\u0442\u0438\u043C\u0435\u0434\u0438\u0430\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438|\u0414\u0435\u043B\u043E\u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u043E|\u041E\u0440\u0433\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0445\u0438\u043C\u0438\u044F|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u0438\u0020\u043F\u0435\u0434\u0430\u0433\u043E\u0433\u0438\u043A\u0430\u0020\u0438\u0433\u0440\u044B|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u043B\u0438\u0447\u043D\u043E\u0441\u0442\u0438|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u043E\u002D\u043F\u0435\u0434\u0430\u0433\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043E\u0441\u043D\u043E\u0432\u044B\u0020\u043D\u0430\u0447\u0430\u043B\u044C\u043D\u043E\u0433\u043E\u0020\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u043F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u043E\u043D\u0430\u043B\u044C\u043D\u043E\u0439\u0020\u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438|\u0421\u0430\u043C\u043E\u043F\u043E\u0437\u043D\u0430\u043D\u0438\u0435\u0020\u0438\u0020\u0441\u0430\u043C\u043E\u0440\u0430\u0437\u0432\u0438\u0442\u0438\u0435|\u0421\u0438\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u043A\u0430|\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0444\u0438\u0437\u0438\u043A\u0430\u0020\u0438\u0020\u0442\u0435\u0440\u043C\u043E\u0434\u0438\u043D\u0430\u043C\u0438\u043A\u0430|\u041E\u0441\u043D\u043E\u0432\u044B\u0020\u0441\u043F\u0435\u0446\u0438\u0430\u043B\u044C\u043D\u043E\u0439\u0020\u0442\u0435\u043E\u0440\u0438\u0438\u0020\u043E\u0442\u043D\u043E\u0441\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438|\u0422\u0435\u043E\u0440\u0435\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043E\u0441\u043D\u043E\u0432\u044B\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0442\u0438\u043A\u0438|\u0422\u0435\u043E\u0440\u0435\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0444\u0438\u0437\u0438\u043A\u0430|\u0422\u0435\u043E\u0440\u0438\u044F\u0020\u0438\u0020\u043C\u0435\u0442\u043E\u0434\u0438\u043A\u0430\u0020\u043E\u0431\u0443\u0447\u0435\u043D\u0438\u044F\u0020\u0445\u0438\u043C\u0438\u0438|\u0424\u0438\u0437\u0438\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430\u0020\u0438\u0020\u0436\u0438\u0432\u043E\u0442\u043D\u044B\u0445|\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u043A\u0430\u0440\u0442\u0438\u043D\u0430\u0020\u043C\u0438\u0440\u0430|\u0424\u0438\u0437\u0438\u043A\u0430\u0020\u0442\u0432\u0435\u0440\u0434\u043E\u0433\u043E\u0020\u0442\u0435\u043B\u0430|\u0424\u0438\u043D\u0430\u043D\u0441\u044B\u0020\u0438\u0020\u043A\u0440\u0435\u0434\u0438\u0442|\u0425\u0438\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u044F|\u0425\u0438\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u044F|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430\u0020\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u044F|\u042D\u043A\u043E\u043B\u043E\u0433\u0438\u044F|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430\u0020\u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u044F|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0442\u0435\u043E\u0440\u0438\u044F|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u0434\u0438\u043D\u0430\u043C\u0438\u043A\u0430|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u0442\u0435\u0445\u043D\u0438\u043A\u0430|\u042F\u0437\u044B\u043A\u0438\u0020\u0438\u0020\u043C\u0435\u0442\u043E\u0434\u044B\u0020\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:disc.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0030\u0031\u0030\u0032\u0030\u0031|\u0030\u0031\u0030\u0034\u0030\u0031|\u0030\u0031\u0030\u0035\u0030\u0031|\u0030\u0031\u0030\u0035\u0030\u0033|\u0030\u0031\u0030\u0037\u0030\u0033|\u0030\u0032\u0030\u0031\u0030\u0031|\u0030\u0032\u0030\u0032\u0030\u0034|\u0030\u0032\u0030\u0032\u0030\u0036|\u0030\u0033\u0030\u0033\u0030\u0031|\u0030\u0033\u0030\u0033\u0030\u0032|\u0030\u0036\u0030\u0038\u0030\u0030|\u0030\u0038\u0030\u0031\u0031\u0036|\u0030\u0038\u0030\u0035\u0030\u0032|\u0030\u0038\u0030\u0035\u0030\u0033|\u0030\u0038\u0030\u0035\u0030\u0037|\u0030\u0039\u0030\u0031\u0030\u0032|\u0030\u0039\u0030\u0031\u0030\u0033|\u0031\u0031\u0030\u0035\u0030\u0030|\u0031\u0032\u0030\u0031\u0030\u0033|\u0031\u0034\u0030\u0033\u0030\u0032|\u0031\u0034\u0030\u0033\u0030\u0035|\u0031\u0035\u0030\u0031\u0030\u0032|\u0031\u0035\u0030\u0037\u0030\u0032|\u0032\u0031\u0030\u0031\u0030\u0033|\u0032\u0033\u0030\u0031\u0030\u0031|\u0032\u0033\u0030\u0031\u0030\u0032|\u0032\u0033\u0030\u0031\u0030\u0034|\u0032\u0033\u0030\u0031\u0030\u0035|\u0032\u0033\u0030\u0032\u0030\u0031|\u0032\u0033\u0030\u0032\u0030\u0032|",               "name" : "|\u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430\u044F\u0020\u043C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\u0020\u0432\u0020\u0434\u0438\u0437\u0430\u0439\u043D\u0435|\u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430\u044F\u0020\u043C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430\u0020\u0438\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0442\u0438\u043A\u0430|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0435\u0020\u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u0435\u0020\u0438\u0020\u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0445\u0020\u0441\u0438\u0441\u0442\u0435\u043C|\u0424\u0438\u0437\u0438\u043A\u0430\u0020\u0417\u0435\u043C\u043B\u0438\u0020\u0438\u0020\u043F\u043B\u0430\u043D\u0435\u0442|\u0425\u0438\u043C\u0438\u044F|\u0411\u043E\u0442\u0430\u043D\u0438\u043A\u0430|\u0413\u0435\u043D\u0435\u0442\u0438\u043A\u0430|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F|\u041A\u043B\u0438\u043D\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u043F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430\u0020\u0438\u0020\u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435\u0020\u043D\u0430\u0020\u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u0438\u0020\u0028\u043F\u043E\u0020\u043E\u0442\u0440\u0430\u0441\u043B\u044F\u043C\u0029|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u043C\u0435\u0442\u043E\u0434\u044B\u0020\u0432\u0020\u044D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0435|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430\u0020\u0438\u0020\u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435\u0020\u043D\u0430\u0020\u043F\u0440\u0435\u0434\u043F\u0440\u0438\u044F\u0442\u0438\u0438\u0020\u0028\u043F\u043E\u0020\u043E\u0442\u0440\u0430\u0441\u043B\u044F\u043C\u0029|\u0410\u043D\u0442\u0438\u043A\u0440\u0438\u0437\u0438\u0441\u043D\u043E\u0435\u0020\u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435|\u041C\u0435\u043D\u0435\u0434\u0436\u043C\u0435\u043D\u0442\u0020\u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438|\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u0430\u044F\u0020\u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C|\u041E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u044F\u0020\u0438\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u0437\u0430\u0449\u0438\u0442\u044B\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438|\u0412\u0435\u0442\u0435\u0440\u0438\u043D\u0430\u0440\u043D\u043E\u002D\u0441\u0430\u043D\u0438\u0442\u0430\u0440\u043D\u0430\u044F\u0020\u044D\u043A\u0441\u043F\u0435\u0440\u0442\u0438\u0437\u0430|\u041A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0433\u0435\u043E\u0434\u0435\u0437\u0438\u044F|\u0424\u0438\u0437\u0438\u043A\u0430\u0020\u0430\u0442\u043E\u043C\u043D\u043E\u0433\u043E\u0020\u044F\u0434\u0440\u0430\u0020\u0438\u0020\u0447\u0430\u0441\u0442\u0438\u0446|\u042F\u0434\u0435\u0440\u043D\u044B\u0435\u0020\u0440\u0435\u0430\u043A\u0442\u043E\u0440\u044B\u0020\u0438\u0020\u044D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u0447\u0435\u0441\u043A\u0438\u0435\u0020\u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438|\u041C\u0435\u0442\u0430\u043B\u043B\u0443\u0440\u0433\u0438\u044F\u0020\u0446\u0432\u0435\u0442\u043D\u044B\u0445\u0020\u043C\u0435\u0442\u0430\u043B\u043B\u043E\u0432|\u0424\u0438\u0437\u0438\u043A\u0430\u0020\u043C\u0435\u0442\u0430\u043B\u043B\u043E\u0432|\u041A\u0432\u0430\u043D\u0442\u043E\u0432\u0430\u044F\u0020\u0438\u0020\u043E\u043F\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0430|\u0412\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435\u0020\u043C\u0430\u0448\u0438\u043D\u044B\u002C\u0020\u043A\u043E\u043C\u043F\u043B\u0435\u043A\u0441\u044B\u002C\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B\u0020\u0438\u0020\u0441\u0435\u0442\u0438|\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B\u0020\u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0438\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438\u0020\u0438\u0020\u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F|\u0421\u0438\u0441\u0442\u0435\u043C\u044B\u0020\u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u043E\u0433\u043E\u0020\u043F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F|\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u043D\u043E\u0435\u0020\u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0435\u043D\u0438\u0435\u0020\u0432\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439\u0020\u0442\u0435\u0445\u043D\u0438\u043A\u0438\u0020\u0438\u0020\u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445\u0020\u0441\u0438\u0441\u0442\u0435\u043C|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B\u0020\u0438\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438\u0020\u0432\u0020\u043E\u0431\u0440\u0430\u0437\u043E\u0432\u0430\u043D\u0438\u0438|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:spec.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0030\u0031\u0030\u0032\u0030\u0030|\u0030\u0031\u0030\u0033\u0030\u0030|\u0030\u0031\u0030\u0034\u0030\u0030|\u0030\u0031\u0030\u0035\u0030\u0030|\u0030\u0032\u0030\u0031\u0030\u0030|\u0030\u0032\u0030\u0032\u0030\u0038|\u0030\u0032\u0030\u0032\u0030|\u0030\u0032\u0030\u0032\u0031\u0030|\u0030\u0032\u0030\u0037\u0030\u0030|\u0030\u0032\u0030\u0038\u0030\u0030|\u0030\u0032\u0030\u0039\u0030\u0030|\u0030\u0033\u0030\u0031\u0030\u0030|\u0030\u0033\u0030\u0033\u0030\u0030|\u0030\u0035\u0030\u0037\u0030\u0030|\u0030\u0038\u0030\u0031\u0030\u0030|\u0030\u0038\u0030\u0033\u0030\u0030|\u0030\u0039\u0030\u0031\u0030\u0030|\u0031\u0031\u0030\u0034\u0030\u0030|\u0031\u0034\u0030\u0032\u0030\u0030|\u0031\u0034\u0030\u0033\u0030\u0030|\u0031\u0035\u0030\u0031\u0030\u0030|\u0032\u0031\u0030\u0031\u0030\u0030|\u0032\u0031\u0030\u0031\u0030\u0030|\u0032\u0032\u0030\u0031\u0030\u0031|\u0032\u0033\u0030\u0031\u0030\u0030|\u0032\u0033\u0030\u0032\u0030\u0030|",               "name" : "|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430\u002E\u0020\u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430\u044F\u0020\u043C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430\u002E\u0020\u041A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440\u043D\u044B\u0435\u0020\u043D\u0430\u0443\u043A\u0438|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438|\u041F\u0440\u0438\u043A\u043B\u0430\u0434\u043D\u0430\u044F\u0020\u043C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430\u0020\u0438\u0020\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0442\u0438\u043A\u0430|\u0425\u0438\u043C\u0438\u044F|\u0411\u0438\u043E\u0445\u0438\u043C\u0438\u044F|\u0411\u0438\u043E\u043B\u043E\u0433\u0438\u044F|\u0411\u0438\u043E\u0438\u043D\u0436\u0435\u043D\u0435\u0440\u0438\u044F\u0020\u0438\u0020\u0431\u0438\u043E\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0442\u0438\u043A\u0430|\u041F\u043E\u0447\u0432\u043E\u0432\u0435\u0434\u0435\u043D\u0438\u0435|\u042D\u043A\u043E\u043B\u043E\u0433\u0438\u044F\u0020\u0438\u0020\u043F\u0440\u0438\u0440\u043E\u0434\u043E\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u0435\u0020\u0009|\u0425\u0438\u043C\u0438\u044F\u002C\u0020\u0444\u0438\u0437\u0438\u043A\u0430\u0020\u0438\u0020\u043C\u0435\u0445\u0430\u043D\u0438\u043A\u0430\u0020\u043C\u0430\u0442\u0435\u0440\u0438\u0430\u043B\u043E\u0432|\u0424\u0438\u043B\u043E\u0441\u043E\u0444\u0438\u044F|\u041F\u0441\u0438\u0445\u043E\u043B\u043E\u0433\u0438\u044F|\u041F\u0435\u0434\u0430\u0433\u043E\u0433\u0438\u043A\u0430|\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430|\u041A\u043E\u043C\u043C\u0435\u0440\u0446\u0438\u044F|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u0430\u044F\u0020\u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C|\u0417\u043E\u043E\u0442\u0435\u0445\u043D\u0438\u044F|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u044D\u043D\u0435\u0440\u0433\u0435\u0442\u0438\u043A\u0430|\u042F\u0434\u0435\u0440\u043D\u044B\u0435\u0020\u0444\u0438\u0437\u0438\u043A\u0430\u0020\u0438\u0020\u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438|\u041C\u0435\u0442\u0430\u043B\u043B\u0443\u0440\u0433\u0438\u044F|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0430\u0020\u0438\u0020\u043C\u0438\u043A\u0440\u043E\u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0430|\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0430\u0020\u0438\u0020\u043C\u0438\u043A\u0440\u043E\u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0430|\u042D\u0440\u0433\u043E\u043D\u043E\u043C\u0438\u043A\u0430|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0442\u0438\u043A\u0430\u0020\u0438\u0020\u0432\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u0430\u044F\u0020\u0442\u0435\u0445\u043D\u0438\u043A\u0430|\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0435\u0020\u0441\u0438\u0441\u0442\u0435\u043C\u044B|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:napr.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0410\u041F\u0423|\u0410\u0421\u041E\u0418\u0423|\u0410\u0425|\u0411\u041C\u042D\u0438\u041E\u0421|\u0411\u041E\u0422|\u0411\u0423\u0424|\u0412\u041C|\u0412\u0422|\u0413\u041F\u041A|\u0417\u041E\u041E|\u0417\u041C\u041E\u0414|\u0418\u041D\u042F\u0417|\u041C\u0430\u0442\u0421\u0442\u0430\u0442|\u041F\u0415\u0414|\u041F\u041C\u0418\u0413|\u0423\u041F|\u0424\u0417\u041A|\u0424\u042D\u0438\u041E\u042D\u041F|",               "name" : "|\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435\u0020\u043F\u0443\u0441\u043A\u043E\u0432\u044B\u0435\u0020\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430|\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0435\u0020\u0441\u0435\u0442\u0435\u0432\u044B\u0435\u0020\u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430|\u0410\u0433\u0440\u043E\u043D\u043E\u043C\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0438\u0020\u0431\u0438\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0445\u0438\u043C\u0438\u044F|\u0411\u0438\u0437\u043D\u0435\u0441\u002C\u0020\u043C\u0430\u0440\u043A\u0435\u0442\u0438\u043D\u0433|\u0411\u043E\u0442\u0430\u043D\u0438\u043A\u0430|\u0411\u0443\u0445\u0433\u0430\u043B\u0442\u0435\u0440\u0441\u043A\u0438\u0439\u0020\u0443\u0447\u0435\u0442\u0020\u0438\u0020\u0444\u0438\u043D\u0430\u043D\u0441\u044B|\u0412\u044B\u0441\u0448\u0430\u044F\u0020\u043C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430|\u0412\u044B\u0447\u0438\u0441\u043B\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439\u0020\u0442\u0435\u0445\u043D\u0438\u043A\u0438|\u0413\u0435\u043D\u0435\u0442\u0438\u043A\u0430\u0020\u043F\u043E\u043B\u0435\u0432\u044B\u0445\u0020\u043A\u0443\u043B\u044C\u0442\u0443\u0440|\u0417\u043E\u043E\u043B\u043E\u0433\u0438\u044F|\u0417\u0435\u043C\u043B\u0435\u0434\u0435\u043B\u0438\u0435\u0020\u0438\u0020\u043C\u0435\u0442\u043E\u0434\u0438\u043A\u0430\u0020\u043E\u043F\u044B\u0442\u043D\u043E\u0433\u043E\u0020\u0434\u0435\u043B\u0430|\u0418\u043D\u043E\u0441\u0442\u0440\u0430\u043D\u043D\u044B\u0439\u0020\u044F\u0437\u044B\u043A|\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F\u0020\u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430|\u041F\u0435\u0434\u0430\u0433\u043E\u0433\u0438\u043A\u0430|\u041F\u043B\u0430\u043D\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\u002C\u0020\u043C\u0430\u0440\u043A\u0435\u0442\u0438\u043D\u0433|\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435|\u0424\u0438\u0437\u0438\u043A\u0430|\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043A\u043E\u0439\u0020\u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u0438\u043A\u0438\u0020\u0438\u0020\u043E\u043F\u0442\u0438\u043A\u043E\u002D\u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u044B\u0445\u0020\u043F\u0440\u0438\u0431\u043E\u0440\u043E\u0432|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:kafch.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;                        rs_variant.addRecord({               "MFN" : rs_variant_rec_number,               "id" : "|\u0413\u0424|\u041F\u0424|\u0424\u0414\u041E|\u0424\u0418\u042F|\u0424\u0418|\u0424\u0418\u041C\u0438\u0424|\u0424\u0418\u0438\u041F|\u0424\u041A\u041F\u0438\u041F|\u0424\u0420\u0438\u0417\u0415\u0424|\u0424\u041C\u0424|\u0424\u0421\u041E|\u0424\u0422\u0438\u041F|\u0424\u0424\u041A|\u0424\u0424|\u0425\u0413\u0424|",               "name" : "|\u0413\u0423\u041C\u0410\u041D\u0418\u0422\u0410\u0420\u041D\u042B\u0419\u0020\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422|\u041F\u0415\u0414\u0410\u0413\u041E\u0413\u0418\u0427\u0415\u0421\u041A\u0418\u0419\u0020\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0020\u0414\u041E\u041F\u041E\u041B\u041D\u0418\u0422\u0415\u041B\u042C\u041D\u041E\u0413\u041E\u0020\u041E\u0411\u0420\u0410\u0417\u041E\u0412\u0410\u041D\u0418\u042F\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0418\u041D\u041E\u0421\u0422\u0420\u0410\u041D\u041D\u042B\u0425\u0020\u042F\u0417\u042B\u041A\u041E\u0412\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0422\u0418\u041A\u0418\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0418\u041D\u0424\u041E\u0420\u041C\u0410\u0422\u0418\u041A\u0418\u002C\u0020\u041C\u0410\u0422\u0415\u041C\u0410\u0422\u0418\u041A\u0418\u0020\u0418\u0020\u0424\u0418\u0417\u0418\u041A\u0418|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0418\u0421\u0422\u041E\u0420\u0418\u0418\u0020\u0418\u0020\u041F\u0420\u0410\u0412\u0410\u0020\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u041A\u041E\u0420\u0420\u0415\u041A\u0426\u0418\u041E\u041D\u041D\u041E\u0419\u0020\u041F\u0415\u0414\u0410\u0413\u041E\u0413\u0418\u041A\u0418\u0020\u0418\u0020\u041F\u0421\u0418\u0425\u041E\u041B\u041E\u0413\u0418\u0418\u0020|\u0424\u0041\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0420\u0423\u0421\u0421\u041A\u041E\u0419\u0020\u0418\u0020\u0417\u0410\u041F\u0410\u0414\u041D\u041E\u002D\u0415\u0412\u0420\u041E\u041F\u0415\u0419\u0421\u041A\u041E\u0419\u0020\u0424\u0418\u041B\u041E\u041B\u041E\u0413\u0418\u0418|\u0424\u0418\u0417\u0418\u041A\u041E\u002D\u041C\u0410\u0422\u0415\u041C\u0410\u0422\u0418\u0427\u0415\u0421\u041A\u0418\u0419\u0020\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0020\u0421\u041E\u0426\u0418\u0410\u041B\u042C\u041D\u041E\u0413\u041E\u0020\u041E\u0411\u0420\u0410\u0417\u041E\u0412\u0410\u041D\u0418\u042F\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0020\u0422\u0415\u0425\u041D\u041E\u041B\u041E\u0413\u0418\u0418\u0020\u0418\u0020\u041F\u0420\u0415\u0414\u041F\u0420\u0418\u041D\u0418\u041C\u0410\u0422\u0415\u041B\u042C\u0421\u0422\u0412\u0410\u0020|\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020\u0424\u0418\u0417\u0418\u0427\u0415\u0421\u041A\u041E\u0419\u0020\u041A\u0423\u041B\u042C\u0422\u0423\u0420\u042B\u0020|\u0424\u0418\u041B\u041E\u041B\u041E\u0413\u0418\u0427\u0415\u0421\u041A\u0418\u0419\u0020\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020|\u0425\u0423\u0414\u041E\u0416\u0415\u0421\u0422\u0412\u0415\u041D\u041D\u041E\u002D\u0413\u0420\u0410\u0424\u0418\u0427\u0415\u0421\u041A\u0418\u0419\u0020\u0424\u0410\u041A\u0423\u041B\u042C\u0422\u0415\u0422\u0020|",               "end" : ""});            variant_search_field_mnu_lst["source_mnu:fak.mnu"] = rs_variant_rec_number;            rs_variant_rec_number++;            
+      
+      var isPageLoading;
+      var ui_variant_search_field_selector_change =
+         function ()
+         {
+            var ctrl = $("#ctrl_search_field_VAR")
+               .html("");
+            var var_fld;
+            
+            if (ui_variant_search_field_selector.val() == null) return;
+            
+            try
+            {
+               var_fld = JSON.parse(decodeURIComponent(ui_variant_search_field_selector.val()));
+            }
+            catch (e)
+            {
+               return;
+            }
+            
+            if (typeof(var_fld.parameters) != "string") return;
+            
+            var elems = var_fld.parameters.split("&");
+            
+            var variant_search_field_value = "";
+            if (isPageLoading)
+               variant_search_field_value = "";
+            
+            sf_VAR = new WebIrbisSearchField(ctrl, "VAR_", variant_search_field_value, var_fld.field_type);
+            sf_VAR.get_ui().css("width", "100%");
+				addToSearchFieldArray(sf_VAR.get_ui());
+            
+            if (var_fld.field_type == "select")
+            {
+               var var_fld_source_record = rs_variant.getIrbisRecord(variant_search_field_mnu_lst[var_fld.source]);
+               // Рассмотрены два варианта подстановки значения при выборе вариативного поля:
+               // 1) в каждый MNU искусственно добавлять пустое значение первым в списке
+               //    (реализовано в dublin_core_load_mnu.pft),
+               //    и подставлять при выборе поля пустое значение.
+               // 2) Подставлять первое значение из MNU.
+               // 
+               // Решено остановиться на варианте 1),
+               // поэтому вариант 2) закомментирован
+               //if (!isPageLoading)
+               //{
+               //   var id_array = var_fld_source_record.getIrbisField_Array("id");
+               //   if (id_array.length > 0)
+               //      variant_search_field_value = id_array[0];
+               //}
+               fill_select(sf_VAR.get_ui(), var_fld_source_record, variant_search_field_value);
+            }
+            
+            for (var n in elems)
+            {
+               var elem = elems[n];
+               var pos = elem.indexOf("=");
+               if (pos > 0)
+               {
+                  var parName = elem.substring(0, pos);
+                  var parVal = elem.substring(pos + 1);
+                  sf_VAR.addCgiParam(parName, parVal);
+                  if (var_fld.field_type != "select")
+                     if (parName == "S21P03")
+                        sf_VAR.setAutoComplete("/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe", Z21ID, P21DBN, parVal, var_fld.autocompleteType);
+               }
+            }
+         };
+      isPageLoading = true;
+      ui_variant_search_field_selector_change();
+      isPageLoading = false;
+      ui_variant_search_field_selector.change(ui_variant_search_field_selector_change);
+      
+      
+      
+      
+       function split( val ) {
+         return val.split( /\s+/ );
+       }
+       
+       function extractLastWord( term ) {
+         return split( term ).pop();
+       }
+       
+       function wholeQuery( term ) {
+         return term;
+       }
+       
+       function SEARCH_STRING_autocompleteSourceUrl(autocompleteTerm)
+       {
+         return "/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?"
+               + "Z21ID=" + $("input[name=Z21ID]").val() + "&"
+               + "SEARCH_IN_FULL_TEXT=1&"
+               + "T21CNR=10&"
+               + "C21COM=T&"
+               + "T21PRF=KT=&"
+               + "I21DBN=" + $("input[name=P21DBN]").val() + "&"
+               + "T21TRM=" + encodeURIComponent(autocompleteTerm) + "&";
+       }
+       
+       function autocompleteSource(request, response, autocompleteSourceUrl, termProcessing)
+       {
+         var autocompleteTerm = termProcessing(request.term);
+         $.ajax({
+            url: autocompleteSourceUrl(autocompleteTerm),
+            success: function(terms) {
+               terms_arr = terms.split("\n");
+               terms_for_autocomplete = new Array();
+               for (term in terms_arr)
+                  terms_for_autocomplete.push(terms_arr[term].split("|")[0]);
+               var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex(autocompleteTerm), "i" );
+               response(
+                  $.grep(
+                     terms_for_autocomplete,
+                     function( item ){ return matcher.test( item ); }
+                  ));
+               //response(terms_for_autocomplete);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) { response([]); }
+         });
+       }
+       
+       $("input[name=SEARCH_STRING]")
+         .bind( "keydown", function( event ) {
+           if ( event.keyCode === $.ui.keyCode.TAB &&
+               $( this ).autocomplete( "instance" ).menu.active ) {
+             event.preventDefault();
+           }
+         })
+         .autocomplete({
+            source: function (request, response) {
+               autocompleteSource(request, response, SEARCH_STRING_autocompleteSourceUrl, extractLastWord);
+            },
+            focus: function() {
+                // prevent value inserted on focus
+                return false;
+            },
+            select: function( event, ui ) {
+                var terms = split( this.value );
+                // remove the current input
+                terms.pop();
+                // add the selected item
+                terms.push( ui.item.value );
+                // add placeholder to get the comma-and-space at the end
+                terms.push( "" );
+                this.value = terms.join( " " );
+                return false;
+            }
+         });
+       
+   });
+
+
+</script>
+
+<table width="100%">
+<tr>
+   <td width="150">
+      <div style="font-size: 13px; font-weight: bold; padding-left: 10px;">
+         Год издания с</div>
+   </td>
+   <td>
+      <input type="text" name="DAT_S21P06" 
+
+value=""
+         style="width: 100px;">
+      <span style="font-size: 13px; font-weight: bold;">по</span>
+      <input type="text" name="DAT_S21P07" 
+
+value=""
+         style="width: 100px;">
+      <input type="hidden" name="DAT_S21P03" value="G=">
+      <input type="hidden" name="DAT_S21P02" value="1">
+      <input type="hidden" name="DAT_S21LOG" value="5">
+   </td>
+</tr>
+<tr>
+   <td width="150">
+      <div style="font-size: 13px; font-weight: bold; padding-left: 10px; display: inline;">
+         Дата поступления с</div>
+   </td>
+   <td>
+      <input type="text" id="ctrl_DP_S21P06" style="width: 100px;">
+      <span style="font-size: 13px; font-weight: bold;">по</span>
+      <input type="text" id="ctrl_DP_S21P07" style="width: 100px;">
+      <input type="hidden" id="DP_S21P06" name="DP_S21P06" value="">
+      <input type="hidden" id="DP_S21P07" name="DP_S21P07" value="">
+      <input type="hidden" name="DP_S21P03" value="DP=">
+      <input type="hidden" name="DP_S21P02" value="1">
+      <input type="hidden" name="DP_S21LOG" value="5">
+</tr>
+<tr>
+   <td width="150">
+      <div style="font-size: 13px; font-weight: bold; padding-left: 10px;">
+         Наличие полного текста</div>
+   </td>
+   <td>
+      <input type="hidden" name="S21ALL" value="">
+      <input type="checkbox" 
+
+      name="CHECK21">
+
+   </td>
+   <td width="85">
+   </td>
+</tr>
+<tr>
+   <td width="150">
+      <div style="font-size: 13px; font-weight: bold; padding-left: 10px;">
+         <select id="variant_search_field_selector" name="variant_search_field_selector" style="width: 100%;"></select>
+      </div>
+   </td>
+   <td>
+      <div id="ctrl_search_field_VAR"/>
+   </td>
+   <td width="85">
+      <div align="right">
+         <input type="button" onclick="emptySearchForm();" style="width: 100%; font-weight: bold; font-size: 13px; font-family: sans-serif;" value="Очистить">
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td width="150">
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 9px; cursor: pointer; color: blue;" onclick="javascript:btn_ftNavigatorControlPanel_click();">
+         Дополнительные возможности
+      </div>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+</tr>
+
+</table>
+
+</div>
+
+<table width="100%">
+<tr>
+   <td width="150">
+      <div style="padding-left: 10px; padding-right: 10px; font-size: 9px; cursor: pointer; color: blue;" title="Дополнительные параметры полнотекстового поиска" onclick="javascript:btn_ftSearchParams_click();">
+         Дополнительные параметры</div>
+   </td>
+   <td>
+   </td>
+   <td width="85">
+   </td>
+</tr>
+</table>
+
+
+</td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<span style="font-size:13px sans-serif; display:none" style="&{head};">
+<br>
+</span>
+
+
+<input name="P21DBN" id="P21DBN" type="hidden" value="VKR1">
+<input name="FT_S21LOG" type="hidden" value="4">
+<input name="FT_S21P03" id="FT_S21P03" type="hidden" value="K=">
+<input name="FT_S21P01" type="hidden" value="3">
+<input name="S21STN" type="hidden" value="1">
+<input name="S21REF" type="hidden" value="10">
+<input name="S21FMT" type="hidden" value="briefHTML_ft">
+<input name="C21COM" type="hidden" value="S">
+<input name="S21COLORTERMS" type="hidden" value="1">
+<input name="FT_PREFIX" type="hidden" value="KT=">
+</form>
+
+<table width="100%">
+
+<form name="YEAR" action="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe" enctype="Multipart/form-data" method="GET">
+<input type="hidden" name="Z21ID" value="10151710151016115155532">
+<input type="hidden" name="I21DBN" value="VKR1_FULLTEXT">
+<input type="hidden" name="P21DBN" value="VKR1">
+<input type="hidden" name="C21COM" value="F">
+<input type="hidden" name="LNG" value="">
+<input type="hidden" name="R21DBN" value="1">
+<div style="text-align:center; font-weight:bold;">Поступления за&nbsp;<select size="1" class="inp1" name="S21YEAR" onchange="submit()">
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+</select>
+год
+</div></form>
+<table border="0" align="center"><tr><td><table class=advanced style="border:1px solid #99ccff;font-size:10pt;margin-bottom:10px" cellspacing="0" cellpadding="5"><tr><th colspan="3" style="background-color:#99ccff"><a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&S21CNR=5&S21STN=1&S21REF=10&C21COM=S&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21ALL=<.>DP=2026$<.>&S21FMT=BriefHTML_ft&Z21ID=10151710151016115155532&R21DBN=1">2026</a> </th></tr><tr><td style="border:1px solid #99ccff;padding:5px">Декабрь</a> </td><td style="border:1px solid #99ccff;padding:5px">Ноябрь</a> </td><td style="border:1px solid #99ccff;padding:5px">Октябрь</a> </td></tr></tr><td style="border:1px solid #99ccff;padding:5px">Сентябрь</a> </td><td style="border:1px solid #99ccff;padding:5px">Август</a> </td><td style="border:1px solid #99ccff;padding:5px">Июль</a> </td></tr></tr><td style="border:1px solid #99ccff;padding:5px"><a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&S21CNR=5&S21STN=1&S21REF=10&C21COM=S&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21ALL=<.>DP=202606$<.>&S21FMT=BriefHTML_ft&Z21ID=10151710151016115155532&R21DBN=1">Июнь</a> </td><td style="border:1px solid #99ccff;padding:5px"><a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&S21CNR=5&S21STN=1&S21REF=10&C21COM=S&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21ALL=<.>DP=202605$<.>&S21FMT=BriefHTML_ft&Z21ID=10151710151016115155532&R21DBN=1">Май</a> </td><td style="border:1px solid #99ccff;padding:5px"><a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&S21CNR=5&S21STN=1&S21REF=10&C21COM=S&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21ALL=<.>DP=202604$<.>&S21FMT=BriefHTML_ft&Z21ID=10151710151016115155532&R21DBN=1">Апрель</a> </td></tr></tr><td style="border:1px solid #99ccff;padding:5px">Март</a> </td><td style="border:1px solid #99ccff;padding:5px">Февраль</a> </td><td style="border:1px solid #99ccff;padding:5px"><a href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&S21CNR=5&S21STN=1&S21REF=10&C21COM=S&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21ALL=<.>DP=202601$<.>&S21FMT=BriefHTML_ft&Z21ID=10151710151016115155532&R21DBN=1">Январь</a> </td></tr></tr></tr></table></td></tr></table>
+</table>
+</center>
+
+<small>Электронный каталог предоставляет пользователям возможность для поиска информации в основных Базах данных: Основной каталог, Труды преподавателей ШГПУ, Краеведение, Выпускные квалификационные работы, МАРС, ЭБС "Юрайт", ЭБС "Университетская библиотека онлайн".
+<br><br>
+В меню БАЗА ДАННЫХ <b>БД Основной каталог </b> стоит первой (по умолчанию). Можно искать по фамилии автора, по заглавию книги, статьи, по ключевым словам. Данные вводятся в поисковой строке Я ИЩУ, после чего нужно нажать Искать или Enter. Дополнительно электронный каталог осуществляет поиск по всем базам данных. Результаты поиска отражены в строке НАЙДЕНО В ДРУГИХ БД.
+<br><br>
+Для более подробного и сложного поиска литературы нужно открыть ниспадающее меню БИБЛИОГРАФИЧЕСКИЙ ПОИСК.
+<br><br>
+<center><b>Подробнее о том, <a href="https://lib.shgpi.edu.ru/dopolnitelnye-resursy/e-katalog/">Как работать в электронном каталоге</a></b></center></small>
+<br><br>
+
+
+
+
+
+
+<div style="display : block;">
+<table border="0">
+	<tr><td><span style="font-size: 8pt;">Отсортировать найденные документы по:</span></td></tr>
+	<tr><td><div id="ctrl_sorting_bar"></div></td></tr>
+</table>
+</div>
+
+<script>
+	$(function ()
+	{
+		var rs = new IrbisRecordSet();
+
+		rs.addRecord({
+			"MFN" : 0,
+			"code" : "AVHEAD|dz|GOD|TIPVID|",
+			"name" : "\u0430\u0432\u0442\u043E\u0440\u0443|\u0437\u0430\u0433\u043B\u0430\u0432\u0438\u044E|\u0433\u043E\u0434\u0443\u0020\u0438\u0437\u0434\u0430\u043D\u0438\u044F|\u0442\u0438\u043F\u0443\u0020\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430|",
+			"end" : ""});
+
+		new SortingBar($("#ctrl_sorting_bar"), rs.getIrbisRecord(0), "", "");
+	});
+</script>
+
+<table>
+<tr>
+<td>
+
+<div style="border:0px;font-size:11px;color:#999999"><br> Поиск по библиографии:&nbsp;(<.>K=ПЕДАГОГ ДОПОЛНИТЕЛЬНОГО ИНЖЕНЕРНО-ТЕХНОЛОГИЧЕСКОГО ОБРАЗОВАНИЯ<.>)</div>
+</td>
+</tr>
+</table>
+
+
+
+
+
+<table><tr> <td colspan="4" align=left> <div style="border:0px;font-size:12px;"><i>Общее количество найденных документов</i> : <B>11</B><br>  </td></tr></table>
+
+<div id="ctrl_headerPortionLinksBar" style="height: 30px;"></div>
+
+
+<script language="JavaScript">window_onload_actions.addAction(   function ()   {      var goPortion = function (portionNumber)         {            new WebIrbisSystem(CGI_PATH).goPortion(portionNumber);         };            var linksBar = new SearchResultPortionLinksBar($("#ctrl_headerPortionLinksBar"), 5, 1, 11, goPortion);      var linksBar = new SearchResultPortionLinksBar($("#ctrl_footerPortionLinksBar"), 5, 1, 11, goPortion);   });   </script>
+<table style="width:100%;border:1px;font-size:11px;">   <tr width=100%>      <td with=5% valign="top">         <div id="search_result_VKR1_FULLTEXT_4303" style="display: inline;">         <input type="checkbox" id="ctrl_search_result_checkbox_VKR1_FULLTEXT_4303">         <b>1.</b>         </div>         <span>         <a title="Напечатать" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&P21DBN=VKR1&I21DBN=VKR1_PRINT&S21FMT=fullw_print&C21COM=F&Z21MFN=4303">         <img border=0 width=32 height=32  src="/irbis64r_plus/images/printer.jpg">         </a>         </span>      </td>            <td width=95%><img style="float:left; margin:10px; width:120px;" src="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=7&I21DBN=VKR1&P21DBN=VKR1&Image_file_name=%5C2024vkr%5C126f%2Epdf&Image_file_mfn=4303&FILE_PAGE=1"><table><tr align="right"><td width="95%"></td></tr></table><b> &nbsp;&nbsp;&nbsp;Ч44<br> &nbsp;&nbsp;&nbsp;Б 898</b><b></b><br>&nbsp;&nbsp;&nbsp;  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%91%D1%80%D1%8E%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%98%D0%BB%D1%8C%D1%8F%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%B8%D1%87"><b>Брюховских, Илья Евгеньевич</b></a>. <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=M=&USES21ALL=1&S21STR="><b></b></a></b> <br>&nbsp;&nbsp;&nbsp; Изучение технологий виртуальной и дополненной реальности в системе <b><font color=red>дополнительного</font></b> <b><font color=red>образования</font></b> : выпуск. квалификац. работа по образоват. прогр. "<b><font color=red>Педагог</font></b> доп. <b><font color=red>инженерно</font></b>-технолог. <b><font color=red>образования</font></b>" по направлению подгот. 44.04.01 "Пед. <b><font color=red>образование</font></b>" / авт. И. Е. Брюховских ; науч. рук. М. Е. Козловских ; рец. Н. Н. Устинова ; Шадр. гос. пед. ун-т, каф. физ.-мат. и информ.-технол. <b><font color=red>образования</font></b>. - Шадринск : [б. и.], 2023. - 79 с. : цв. - Загл. с титул. экрана. - Электрон. версия неопубл. док. - Доступ из ЭБ ШГПУ (БД ВКР), для зарегистрир. пользователей. - Библиогр.: с. 58-65 (49 назв.). - 0.00. - Текст : электронный.<br><b>ББК </b>Ч448.478<br><b>Рубрики: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%92%D1%8B%D1%81%D1%88%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%2D%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Высшее <b><font color=red>образование</font></b>--Повышение квалификации и <b><font color=red>дополнительное</font></b> <b><font color=red>образование</font></b></a><br><b>Кл.слова (ненормированные): </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95">ПЕДАГОГИЧЕСКОЕ <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=44%2E04%2E01">44.04.01</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%2D%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><b><font color=red>педагог</font></b> <b><font color=red>дополнительного</font></b> <b><font color=red>инженерно</font></b>-<b><font color=red>технологического</font></b> <b><font color=red>образования</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%90%D0%93%D0%98%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%A3%D0%A0%D0%90">МАГИСТРАТУРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9E%D0%A7%D0%9D%D0%90%D0%AF%20%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">ОЧНАЯ ФОРМА ОБУЧЕНИЯ</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A%D0%9D%D0%90%D0%AF%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%9D%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90%20%D0%9E%D0%9F%D0%AB%D0%A2%D0%9D%D0%9E%2D%D0%9F%D0%A0%D0%90%D0%9A%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%A5%D0%90%D0%A0%D0%90%D0%9A%D0%A2%D0%95%D0%A0%D0%90">ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА ОПЫТНО-ПРАКТИЧЕСКОГО ХАРАКТЕРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%A1%D0%9A%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90">ИССЛЕДОВАТЕЛЬСКАЯ РАБОТА</a><br><b>Дескрипторы: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95"><b><font color=red>ДОПОЛНИТЕЛЬНОЕ</font></b> <b><font color=red>ОБРАЗОВАНИЕ</font></b></a><br><b>Аннотация: </b>Цель исследования: изучить теоретические основы и разработать учебно-методические материалы для обучения виртуальной и дополненной реальности в ДТ Кванториум. Результат работы: изучены источники по теме исследования; проанализировано программное и аппаратное обеспечение технологий VR/AR; разработаны учебно-методические материалы для обучения технологиям VR/AR на первом и втором годах обучения.  <br><b> Доп.точки доступа: </b> <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Козловских, Марина Евгеньевна \науч. рук.\; </a><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%A3%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0%2C%20%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%BD%D0%B0">Устинова, Наталья Николаевна \рец.\</a><script language="JavaScript">
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none") 
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+ </script>  
+<br><br><div><a style="cursor: pointer; cursor: hand;color:blue;text-decoration:underline;" onclick="javascript:DropDown('EKZ950454');">Экземпляры</a><div style="display:none;" id="EKZ950454">
+<b> Всего:</b> 1, ЭБ (1)<br><b>Свободны: </b>ЭБ (1)</div></div><!><!><br>  </td>   </tr> </table>                   <!>                 <div id="ctrl_openPageViewer_VKR1_FULLTEXT_4303"                   title="Постраничный просмотр полного текста. "                   style="color: blue; cursor: pointer; font-size : 11px; display: inline;">Постраничный просмотр полного текста</div>                 <br> <!>                          <!><a title="display: none; Скачать полный текст" style="cursor: pointer; color: blue; font-size : 11px; text-decoration: none; display: block;">Нет прав на скачивание полного текста</a><!>   <script>      var currMFN = 4303;   srrs_VKR1_FULLTEXT.addRecord({
+"MFN" : currMFN, 
+"955" : "\u005E\u0041\u005C\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u005C\u0031\u0032\u0036\u0066\u002E\u0070\u0064\u0066\u005E\u004E\u0037\u0039\u005E\u0042\u0030\u0030\u0030\u0033|", 
+"1001" : "\u0031\u0031|", 
+"S21REF" : "\u0031\u0030|", 
+"2221" : "\u0056\u004B\u0052\u0031\u005F\u0046\u0055\u004C\u004C\u0054\u0045\u0058\u0054|", 
+"DB_NAME" : "VKR1|", 
+"IMAGE_FILE_NAME" : "\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0036\u0066\u0025\u0032\u0045\u0070\u0064\u0066|", 
+"Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|", 
+"3335" : "", 
+"3337" : "", 
+"S21STN" : "", 
+"PDF_PAGES" : "", 
+"SEARCH_STRING" : "", 
+"3500" : "", 
+"textPagesQuery" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0036\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"S21AllTRM" : "", 
+"S21ALL" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0036\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"end" : ""});
+      </script><div id="ctrl_give_out_count_VKR1_FULLTEXT_4303" style="font-size: 11px;"></div><div id="ctrl_digital_give_out_count_VKR1_FULLTEXT_4303" style="font-size: 11px;"></div> <div id="ctrl_others_link_container_VKR1_FULLTEXT_4303" style="display: none;">      <img border=0 width="25px" style="display: inline; vertical-align: middle;" src="/irbis64r_plus/images/books_ring.png">      <div id="ctrl_others_link_VKR1_FULLTEXT_4303" style="color: blue; cursor: pointer; font-size: 11px; display: inline; vertical-align: middle;"></div> </div><script>$(   function (currMFN) { return function()   {      var updated_value_count =          parseInt(            "0"               , 10);      var sumRating =          parseInt(            "0"               , 10);      var updated_average_rating = (updated_value_count > 0 ? sumRating / updated_value_count : 0);            var ratingBar = new RatingBar($("#ctrl_rating_VKR1_FULLTEXT_" + currMFN), undefined, "/irbis64r_plus/images/star-on.png", "/irbis64r_plus/images/star-off.png", "/irbis64r_plus/images/star-half.png");            lst_updateRating[currMFN] = function (rating, valueCount)         {            $("#ctrl_rating_value_VKR1_FULLTEXT_" + currMFN).text("Рейтинг издания: " + rating.toFixed(2));            ratingBar.showRatingBar(rating);            $("#ctrl_rating_valueCount_VKR1_FULLTEXT_" + currMFN).text((valueCount == 0 ? "(нет оценок)" : "(всего оценок: " + valueCount + ")"));         };               lst_updateRating[currMFN](updated_average_rating, updated_value_count);            var updated_digital_give_out_count =          parseInt(            "02"            , 10);            var updated_give_out_count =          parseInt(            "0"            , 10);            lst_updateGiveOut[currMFN] = function (digital_give_out_count, give_out_count)         {            if (give_out_count !== undefined)               $("#ctrl_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во книговыдач: " + give_out_count);            if (digital_give_out_count !== undefined)               $("#ctrl_digital_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во обращений к полному тексту: " + digital_give_out_count);         };            lst_updateGiveOut[currMFN](updated_digital_give_out_count, updated_give_out_count);   }}(currMFN));</script><table style="font-size: 11px;"> <tr>   <td><div id="ctrl_rating_value_VKR1_FULLTEXT_4303" /></td>   <td><div id="ctrl_rating_VKR1_FULLTEXT_4303" /></td>   <td><div id="ctrl_rating_valueCount_VKR1_FULLTEXT_4303" /></td> </tr> </table>         <div class="BottomCellN">         </div>      </td>   </tr></table><table style="width:100%;border:1px;font-size:11px;">   <tr width=100%>      <td with=5% valign="top">         <div id="search_result_VKR1_FULLTEXT_4304" style="display: inline;">         <input type="checkbox" id="ctrl_search_result_checkbox_VKR1_FULLTEXT_4304">         <b>2.</b>         </div>         <span>         <a title="Напечатать" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&P21DBN=VKR1&I21DBN=VKR1_PRINT&S21FMT=fullw_print&C21COM=F&Z21MFN=4304">         <img border=0 width=32 height=32  src="/irbis64r_plus/images/printer.jpg">         </a>         </span>      </td>            <td width=95%><img style="float:left; margin:10px; width:120px;" src="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=7&I21DBN=VKR1&P21DBN=VKR1&Image_file_name=%5C2024vkr%5C127f%2Epdf&Image_file_mfn=4304&FILE_PAGE=1"><table><tr align="right"><td width="95%"></td></tr></table><b> &nbsp;&nbsp;&nbsp;Ч44<br> &nbsp;&nbsp;&nbsp;Е 782</b><b></b><br>&nbsp;&nbsp;&nbsp;  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%95%D1%80%D0%BE%D1%85%D0%B8%D0%BD%2C%20%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87"><b>Ерохин, Павел Владимирович</b></a>. <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=M=&USES21ALL=1&S21STR="><b></b></a></b> <br>&nbsp;&nbsp;&nbsp; Развитие алгоритмического мышления обучающихся в процессе обучения программированию на базе Arduino. : выпуск. квалификац. работа по образоват. прогр. "<b><font color=red>Педагог</font></b> доп. <b><font color=red>инженерно</font></b>-технолог. <b><font color=red>образования</font></b>" по направлению подгот. 44.04.01 "Пед. <b><font color=red>образование</font></b>" / авт. П. В. Ерохин ; науч. рук. М. Е. Козловских ; рец. В. Е. Евдокимова ; Шадр. гос. пед. ун-т, каф. физ.-мат. и информ.-технол. <b><font color=red>образования</font></b>. - Шадринск : [б. и.], 2023. - 75 с. : цв. - Загл. с титул. экрана. - Электрон. версия неопубл. док. - Доступ из ЭБ ШГПУ (БД ВКР), для зарегистрир. пользователей. - Библиогр.: с. 67-75 (59 назв.). - 0.00. - Текст : электронный.<br>  Прил. отсутствуют<br><b>УДК</b>&nbsp;&nbsp;<A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=U=&USES21ALL=1&S21STR=004%3A37%2E016">004:37.016</a>&nbsp;&nbsp;<br><b>ББК </b>Ч448.478<br><b>Рубрики: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%92%D1%8B%D1%81%D1%88%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%2D%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Высшее <b><font color=red>образование</font></b>--Повышение квалификации и <b><font color=red>дополнительное</font></b> <b><font color=red>образование</font></b></a>,  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20%2D%2D%20%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D0%BA%D0%B0%20%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B8">Информатика--Методика преподавания информатики</a><br><b>Кл.слова (ненормированные): </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95">ПЕДАГОГИЧЕСКОЕ <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=44%2E04%2E01">44.04.01</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%2D%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><b><font color=red>педагог</font></b> <b><font color=red>дополнительного</font></b> <b><font color=red>инженерно</font></b>-<b><font color=red>технологического</font></b> <b><font color=red>образования</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%90%D0%93%D0%98%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%A3%D0%A0%D0%90">МАГИСТРАТУРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9E%D0%A7%D0%9D%D0%90%D0%AF%20%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">ОЧНАЯ ФОРМА ОБУЧЕНИЯ</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A%D0%9D%D0%90%D0%AF%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%9D%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90%20%D0%9E%D0%9F%D0%AB%D0%A2%D0%9D%D0%9E%2D%D0%9F%D0%A0%D0%90%D0%9A%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%A5%D0%90%D0%A0%D0%90%D0%9A%D0%A2%D0%95%D0%A0%D0%90">ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА ОПЫТНО-ПРАКТИЧЕСКОГО ХАРАКТЕРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%A1%D0%9A%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90">ИССЛЕДОВАТЕЛЬСКАЯ РАБОТА</a><br><b>Дескрипторы: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95"><b><font color=red>ДОПОЛНИТЕЛЬНОЕ</font></b> <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%9D%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%D0%A2%D0%98%D0%9A%D0%90">ИНФОРМАТИКА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%95%D0%A2%D0%9E%D0%94%D0%AB%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">МЕТОДЫ ОБУЧЕНИЯ</a><br><b>Аннотация: </b>Цель исследования: анализ содержания и разработка заданий, а также методических рекомендаций к ним для развития алгоритмического мышления в процессе обучения программированию на базе Arduino. Результат работы: разработаны задания и методические рекомендации к ним, призванные развивать компоненты алгоритмического мышления при использовании платформы Arduino.  <br><b> Доп.точки доступа: </b> <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Козловских, Марина Евгеньевна \науч. рук.\; </a><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%95%D0%B2%D0%B4%D0%BE%D0%BA%D0%B8%D0%BC%D0%BE%D0%B2%D0%B0%2C%20%D0%92%D0%B5%D1%80%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Евдокимова, Вера Евгеньевна \рец.\</a><script language="JavaScript">
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none") 
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+ </script>  
+<br><br><div><a style="cursor: pointer; cursor: hand;color:blue;text-decoration:underline;" onclick="javascript:DropDown('EKZ838457');">Экземпляры</a><div style="display:none;" id="EKZ838457">
+<b> Всего:</b> 1, ЭБ (1)<br><b>Свободны: </b>ЭБ (1)</div></div><!><!><br>  </td>   </tr> </table>                   <!>                 <div id="ctrl_openPageViewer_VKR1_FULLTEXT_4304"                   title="Постраничный просмотр полного текста. "                   style="color: blue; cursor: pointer; font-size : 11px; display: inline;">Постраничный просмотр полного текста</div>                 <br> <!>                          <!><a title="display: none; Скачать полный текст" style="cursor: pointer; color: blue; font-size : 11px; text-decoration: none; display: block;">Нет прав на скачивание полного текста</a><!>   <script>      var currMFN = 4304;   srrs_VKR1_FULLTEXT.addRecord({
+"MFN" : currMFN, 
+"955" : "\u005E\u0041\u005C\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u005C\u0031\u0032\u0037\u0066\u002E\u0070\u0064\u0066\u005E\u004E\u0037\u0035\u005E\u0042\u0030\u0030\u0030\u0033|", 
+"1001" : "\u0031\u0031|", 
+"S21REF" : "\u0031\u0030|", 
+"2221" : "\u0056\u004B\u0052\u0031\u005F\u0046\u0055\u004C\u004C\u0054\u0045\u0058\u0054|", 
+"DB_NAME" : "VKR1|", 
+"IMAGE_FILE_NAME" : "\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0037\u0066\u0025\u0032\u0045\u0070\u0064\u0066|", 
+"Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|", 
+"3335" : "", 
+"3337" : "", 
+"S21STN" : "", 
+"PDF_PAGES" : "", 
+"SEARCH_STRING" : "", 
+"3500" : "", 
+"textPagesQuery" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0037\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"S21AllTRM" : "", 
+"S21ALL" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0037\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"end" : ""});
+      </script><div id="ctrl_give_out_count_VKR1_FULLTEXT_4304" style="font-size: 11px;"></div><div id="ctrl_digital_give_out_count_VKR1_FULLTEXT_4304" style="font-size: 11px;"></div> <div id="ctrl_others_link_container_VKR1_FULLTEXT_4304" style="display: none;">      <img border=0 width="25px" style="display: inline; vertical-align: middle;" src="/irbis64r_plus/images/books_ring.png">      <div id="ctrl_others_link_VKR1_FULLTEXT_4304" style="color: blue; cursor: pointer; font-size: 11px; display: inline; vertical-align: middle;"></div> </div><script>$(   function (currMFN) { return function()   {      var updated_value_count =          parseInt(            "0"               , 10);      var sumRating =          parseInt(            "0"               , 10);      var updated_average_rating = (updated_value_count > 0 ? sumRating / updated_value_count : 0);            var ratingBar = new RatingBar($("#ctrl_rating_VKR1_FULLTEXT_" + currMFN), undefined, "/irbis64r_plus/images/star-on.png", "/irbis64r_plus/images/star-off.png", "/irbis64r_plus/images/star-half.png");            lst_updateRating[currMFN] = function (rating, valueCount)         {            $("#ctrl_rating_value_VKR1_FULLTEXT_" + currMFN).text("Рейтинг издания: " + rating.toFixed(2));            ratingBar.showRatingBar(rating);            $("#ctrl_rating_valueCount_VKR1_FULLTEXT_" + currMFN).text((valueCount == 0 ? "(нет оценок)" : "(всего оценок: " + valueCount + ")"));         };               lst_updateRating[currMFN](updated_average_rating, updated_value_count);            var updated_digital_give_out_count =          parseInt(            "02"            , 10);            var updated_give_out_count =          parseInt(            "0"            , 10);            lst_updateGiveOut[currMFN] = function (digital_give_out_count, give_out_count)         {            if (give_out_count !== undefined)               $("#ctrl_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во книговыдач: " + give_out_count);            if (digital_give_out_count !== undefined)               $("#ctrl_digital_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во обращений к полному тексту: " + digital_give_out_count);         };            lst_updateGiveOut[currMFN](updated_digital_give_out_count, updated_give_out_count);   }}(currMFN));</script><table style="font-size: 11px;"> <tr>   <td><div id="ctrl_rating_value_VKR1_FULLTEXT_4304" /></td>   <td><div id="ctrl_rating_VKR1_FULLTEXT_4304" /></td>   <td><div id="ctrl_rating_valueCount_VKR1_FULLTEXT_4304" /></td> </tr> </table>         <div class="BottomCellN">         </div>      </td>   </tr></table><table style="width:100%;border:1px;font-size:11px;">   <tr width=100%>      <td with=5% valign="top">         <div id="search_result_VKR1_FULLTEXT_4305" style="display: inline;">         <input type="checkbox" id="ctrl_search_result_checkbox_VKR1_FULLTEXT_4305">         <b>3.</b>         </div>         <span>         <a title="Напечатать" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&P21DBN=VKR1&I21DBN=VKR1_PRINT&S21FMT=fullw_print&C21COM=F&Z21MFN=4305">         <img border=0 width=32 height=32  src="/irbis64r_plus/images/printer.jpg">         </a>         </span>      </td>            <td width=95%><img style="float:left; margin:10px; width:120px;" src="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=7&I21DBN=VKR1&P21DBN=VKR1&Image_file_name=%5C2024vkr%5C128f%2Epdf&Image_file_mfn=4305&FILE_PAGE=1"><table><tr align="right"><td width="95%"></td></tr></table><b> &nbsp;&nbsp;&nbsp;Ч44<br> &nbsp;&nbsp;&nbsp;К 903</b><b></b><br>&nbsp;&nbsp;&nbsp;  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D1%83%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%90%D0%BB%D1%91%D0%BD%D0%B0%20%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0"><b>Куликовских, Алёна Юрьевна</b></a>. <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=M=&USES21ALL=1&S21STR="><b></b></a></b> <br>&nbsp;&nbsp;&nbsp; Использование среды программирования TRIK Studio в процессе обучения робототехнике в детском технопарке Кванториум : выпуск. квалификац. работа по образоват. прогр. "<b><font color=red>Педагог</font></b> доп. <b><font color=red>инженерно</font></b>-технолог. <b><font color=red>образования</font></b>" по направлению подгот. 44.04.01 "Пед. <b><font color=red>образование</font></b>" / авт. А. Ю. Куликовских ; науч. рук. М. Е. Козловских ; рец. Н. Н. Устинова ; Шадр. гос. пед. ун-т, каф. физ.-мат. и информ.-технол. <b><font color=red>образования</font></b>. - Шадринск : [б. и.], 2023. - 92 с. : цв. - Загл. с титул. экрана. - Электрон. версия неопубл. док. - Доступ из ЭБ ШГПУ (БД ВКР), для зарегистрир. пользователей. - Библиогр.: с. 63-71 (63 назв.). - 0.00. - Текст : электронный.<br><b>УДК</b>&nbsp;&nbsp;<A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=U=&USES21ALL=1&S21STR=004%2E8">004.8</a>&nbsp;&nbsp;<br><b>ББК </b>Ч448.478<br><b>Рубрики: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%92%D1%8B%D1%81%D1%88%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%2D%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Высшее <b><font color=red>образование</font></b>--Повышение квалификации и <b><font color=red>дополнительное</font></b> <b><font color=red>образование</font></b></a>,  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20%2D%2D%20%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82">Информатика--Искусственный интеллект</a><br><b>Кл.слова (ненормированные): </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95">ПЕДАГОГИЧЕСКОЕ <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=44%2E04%2E01">44.04.01</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%2D%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><b><font color=red>педагог</font></b> <b><font color=red>дополнительного</font></b> <b><font color=red>инженерно</font></b>-<b><font color=red>технологического</font></b> <b><font color=red>образования</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%90%D0%93%D0%98%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%A3%D0%A0%D0%90">МАГИСТРАТУРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9E%D0%A7%D0%9D%D0%90%D0%AF%20%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">ОЧНАЯ ФОРМА ОБУЧЕНИЯ</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A%D0%9D%D0%90%D0%AF%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%9D%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90%20%D0%9E%D0%9F%D0%AB%D0%A2%D0%9D%D0%9E%2D%D0%9F%D0%A0%D0%90%D0%9A%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%A5%D0%90%D0%A0%D0%90%D0%9A%D0%A2%D0%95%D0%A0%D0%90">ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА ОПЫТНО-ПРАКТИЧЕСКОГО ХАРАКТЕРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%A1%D0%9A%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90">ИССЛЕДОВАТЕЛЬСКАЯ РАБОТА</a><br><b>Дескрипторы: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95"><b><font color=red>ДОПОЛНИТЕЛЬНОЕ</font></b> <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%9D%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%D0%A2%D0%98%D0%9A%D0%90">ИНФОРМАТИКА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%95%D0%A2%D0%9E%D0%94%D0%AB%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">МЕТОДЫ ОБУЧЕНИЯ</a><br><b>Аннотация: </b>Цель: изучить возможности среды программирования TRIK Studio и разработать учебно-методические рекомендации для эффективного обучения школьников программированию роботов с использованием данной среды. Результат работы: разработан комплекс учебно-методических материалов для обучения программированию роботов LMEv3 с использованием среды TRIK Studio в детском технопарке Кванториум.  <br><b> Доп.точки доступа: </b> <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Козловских, Марина Евгеньевна \науч. рук.\; </a><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%A3%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B0%2C%20%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F%20%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%BD%D0%B0">Устинова, Наталья Николаевна \рец.\</a><script language="JavaScript">
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none") 
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+ </script>  
+<br><br><div><a style="cursor: pointer; cursor: hand;color:blue;text-decoration:underline;" onclick="javascript:DropDown('EKZ170693');">Экземпляры</a><div style="display:none;" id="EKZ170693">
+<b> Всего:</b> 1, ЭБ (1)<br><b>Свободны: </b>ЭБ (1)</div></div><!><!><br>  </td>   </tr> </table>                   <!>                 <div id="ctrl_openPageViewer_VKR1_FULLTEXT_4305"                   title="Постраничный просмотр полного текста. "                   style="color: blue; cursor: pointer; font-size : 11px; display: inline;">Постраничный просмотр полного текста</div>                 <br> <!>                          <!><a title="display: none; Скачать полный текст" style="cursor: pointer; color: blue; font-size : 11px; text-decoration: none; display: block;">Нет прав на скачивание полного текста</a><!>   <script>      var currMFN = 4305;   srrs_VKR1_FULLTEXT.addRecord({
+"MFN" : currMFN, 
+"955" : "\u005E\u0041\u005C\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u005C\u0031\u0032\u0038\u0066\u002E\u0070\u0064\u0066\u005E\u004E\u0039\u0032\u005E\u0042\u0030\u0030\u0030\u0033|", 
+"1001" : "\u0031\u0031|", 
+"S21REF" : "\u0031\u0030|", 
+"2221" : "\u0056\u004B\u0052\u0031\u005F\u0046\u0055\u004C\u004C\u0054\u0045\u0058\u0054|", 
+"DB_NAME" : "VKR1|", 
+"IMAGE_FILE_NAME" : "\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0038\u0066\u0025\u0032\u0045\u0070\u0064\u0066|", 
+"Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|", 
+"3335" : "", 
+"3337" : "", 
+"S21STN" : "", 
+"PDF_PAGES" : "", 
+"SEARCH_STRING" : "", 
+"3500" : "", 
+"textPagesQuery" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0038\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"S21AllTRM" : "", 
+"S21ALL" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0038\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"end" : ""});
+      </script><div id="ctrl_give_out_count_VKR1_FULLTEXT_4305" style="font-size: 11px;"></div><div id="ctrl_digital_give_out_count_VKR1_FULLTEXT_4305" style="font-size: 11px;"></div> <div id="ctrl_others_link_container_VKR1_FULLTEXT_4305" style="display: none;">      <img border=0 width="25px" style="display: inline; vertical-align: middle;" src="/irbis64r_plus/images/books_ring.png">      <div id="ctrl_others_link_VKR1_FULLTEXT_4305" style="color: blue; cursor: pointer; font-size: 11px; display: inline; vertical-align: middle;"></div> </div><script>$(   function (currMFN) { return function()   {      var updated_value_count =          parseInt(            "0"               , 10);      var sumRating =          parseInt(            "0"               , 10);      var updated_average_rating = (updated_value_count > 0 ? sumRating / updated_value_count : 0);            var ratingBar = new RatingBar($("#ctrl_rating_VKR1_FULLTEXT_" + currMFN), undefined, "/irbis64r_plus/images/star-on.png", "/irbis64r_plus/images/star-off.png", "/irbis64r_plus/images/star-half.png");            lst_updateRating[currMFN] = function (rating, valueCount)         {            $("#ctrl_rating_value_VKR1_FULLTEXT_" + currMFN).text("Рейтинг издания: " + rating.toFixed(2));            ratingBar.showRatingBar(rating);            $("#ctrl_rating_valueCount_VKR1_FULLTEXT_" + currMFN).text((valueCount == 0 ? "(нет оценок)" : "(всего оценок: " + valueCount + ")"));         };               lst_updateRating[currMFN](updated_average_rating, updated_value_count);            var updated_digital_give_out_count =          parseInt(            "02"            , 10);            var updated_give_out_count =          parseInt(            "0"            , 10);            lst_updateGiveOut[currMFN] = function (digital_give_out_count, give_out_count)         {            if (give_out_count !== undefined)               $("#ctrl_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во книговыдач: " + give_out_count);            if (digital_give_out_count !== undefined)               $("#ctrl_digital_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во обращений к полному тексту: " + digital_give_out_count);         };            lst_updateGiveOut[currMFN](updated_digital_give_out_count, updated_give_out_count);   }}(currMFN));</script><table style="font-size: 11px;"> <tr>   <td><div id="ctrl_rating_value_VKR1_FULLTEXT_4305" /></td>   <td><div id="ctrl_rating_VKR1_FULLTEXT_4305" /></td>   <td><div id="ctrl_rating_valueCount_VKR1_FULLTEXT_4305" /></td> </tr> </table>         <div class="BottomCellN">         </div>      </td>   </tr></table><table style="width:100%;border:1px;font-size:11px;">   <tr width=100%>      <td with=5% valign="top">         <div id="search_result_VKR1_FULLTEXT_4306" style="display: inline;">         <input type="checkbox" id="ctrl_search_result_checkbox_VKR1_FULLTEXT_4306">         <b>4.</b>         </div>         <span>         <a title="Напечатать" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&P21DBN=VKR1&I21DBN=VKR1_PRINT&S21FMT=fullw_print&C21COM=F&Z21MFN=4306">         <img border=0 width=32 height=32  src="/irbis64r_plus/images/printer.jpg">         </a>         </span>      </td>            <td width=95%><img style="float:left; margin:10px; width:120px;" src="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=7&I21DBN=VKR1&P21DBN=VKR1&Image_file_name=%5C2024vkr%5C129f%2Epdf&Image_file_mfn=4306&FILE_PAGE=1"><table><tr align="right"><td width="95%"></td></tr></table><b> &nbsp;&nbsp;&nbsp;Ч44<br> &nbsp;&nbsp;&nbsp;М 912</b><b></b><br>&nbsp;&nbsp;&nbsp;  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9C%D1%83%D1%80%D0%B7%D0%B8%D0%BD%D0%B0%2C%20%D0%95%D0%BB%D0%B5%D0%BD%D0%B0%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%BD%D0%B0"><b>Мурзина, Елена Владимировна</b></a>. <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=M=&USES21ALL=1&S21STR="><b></b></a></b> <br>&nbsp;&nbsp;&nbsp; Развитие произвольного внимания обучающихся при обучении игре в шахматы в системе <b><font color=red>дополнительного</font></b> <b><font color=red>образования</font></b> : выпуск. квалификац. работа по образоват. прогр. "<b><font color=red>Педагог</font></b> доп. <b><font color=red>инженерно</font></b>-технолог. <b><font color=red>образования</font></b>" по направлению подгот. 44.04.01 "Пед. <b><font color=red>образование</font></b>" / авт. Е. В. Мурзина ; науч. рук. М. Е. Козловских ; рец. О. А. Кириллова ; Шадр. гос. пед. ун-т, каф. физ.-мат. и информ.-технол. <b><font color=red>образования</font></b>. - Шадринск : [б. и.], 2023. - 53 с. : цв. - Загл. с титул. экрана. - Электрон. версия неопубл. док. - Доступ из ЭБ ШГПУ (БД ВКР), для зарегистрир. пользователей. - Библиогр.: с. 34-41 (51 назв.). - 0.00. - Текст : электронный.<br><b>ББК </b>Ч448.478 + Ч558<br><b>Рубрики: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%92%D1%8B%D1%81%D1%88%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%2D%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Высшее <b><font color=red>образование</font></b>--Повышение квалификации и <b><font color=red>дополнительное</font></b> <b><font color=red>образование</font></b></a>,  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%A4%D0%B8%D0%B7%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B0%20%D0%B8%20%D1%81%D0%BF%D0%BE%D1%80%D1%82%20%2D%2D%20%D0%A8%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D1%8B%2E%20%D0%A8%D0%B0%D1%88%D0%BA%D0%B8">Физкультура и спорт--Шахматы. Шашки</a><br><b>Кл.слова (ненормированные): </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95">ПЕДАГОГИЧЕСКОЕ <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=44%2E04%2E01">44.04.01</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%2D%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><b><font color=red>педагог</font></b> <b><font color=red>дополнительного</font></b> <b><font color=red>инженерно</font></b>-<b><font color=red>технологического</font></b> <b><font color=red>образования</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%90%D0%93%D0%98%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%A3%D0%A0%D0%90">МАГИСТРАТУРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9E%D0%A7%D0%9D%D0%90%D0%AF%20%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">ОЧНАЯ ФОРМА ОБУЧЕНИЯ</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A%D0%9D%D0%90%D0%AF%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%9D%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90%20%D0%9E%D0%9F%D0%AB%D0%A2%D0%9D%D0%9E%2D%D0%9F%D0%A0%D0%90%D0%9A%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%A5%D0%90%D0%A0%D0%90%D0%9A%D0%A2%D0%95%D0%A0%D0%90">ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА ОПЫТНО-ПРАКТИЧЕСКОГО ХАРАКТЕРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%A1%D0%9A%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90">ИССЛЕДОВАТЕЛЬСКАЯ РАБОТА</a><br><b>Дескрипторы: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95"><b><font color=red>ДОПОЛНИТЕЛЬНОЕ</font></b> <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%95%D0%A2%D0%9E%D0%94%D0%AB%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">МЕТОДЫ ОБУЧЕНИЯ</a><br><b>Аннотация: </b>Цель: проанализировать теоретические основы и разработать учебно-методические материалы для развития произвольного внимания при обучении игре в шахматы в ДТ Кванториум. Результат работы: выделено определение, особенности, приведены возможные способы и средства развития произвольного внимания, разработаны учебно-методические материалы для развития произвольного внимания у шахматистов нулевой и первой линии обучения.  <br><b> Доп.точки доступа: </b> <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Козловских, Марина Евгеньевна \науч. рук.\; </a><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%D0%BB%D0%BE%D0%B2%D0%B0%2C%20%D0%9E%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%BD%D0%B0">Кириллова, Оксана Александровна \рец.\</a><script language="JavaScript">
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none") 
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+ </script>  
+<br><br><div><a style="cursor: pointer; cursor: hand;color:blue;text-decoration:underline;" onclick="javascript:DropDown('EKZ373302');">Экземпляры</a><div style="display:none;" id="EKZ373302">
+<b> Всего:</b> 1, ЭБ (1)<br><b>Свободны: </b>ЭБ (1)</div></div><!><!><br>  </td>   </tr> </table>                   <!>                 <div id="ctrl_openPageViewer_VKR1_FULLTEXT_4306"                   title="Постраничный просмотр полного текста. "                   style="color: blue; cursor: pointer; font-size : 11px; display: inline;">Постраничный просмотр полного текста</div>                 <br> <!>                          <!><a title="display: none; Скачать полный текст" style="cursor: pointer; color: blue; font-size : 11px; text-decoration: none; display: block;">Нет прав на скачивание полного текста</a><!>   <script>      var currMFN = 4306;   srrs_VKR1_FULLTEXT.addRecord({
+"MFN" : currMFN, 
+"955" : "\u005E\u0041\u005C\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u005C\u0031\u0032\u0039\u0066\u002E\u0070\u0064\u0066\u005E\u004E\u0035\u0033\u005E\u0042\u0030\u0030\u0030\u0033|", 
+"1001" : "\u0031\u0031|", 
+"S21REF" : "\u0031\u0030|", 
+"2221" : "\u0056\u004B\u0052\u0031\u005F\u0046\u0055\u004C\u004C\u0054\u0045\u0058\u0054|", 
+"DB_NAME" : "VKR1|", 
+"IMAGE_FILE_NAME" : "\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0039\u0066\u0025\u0032\u0045\u0070\u0064\u0066|", 
+"Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|", 
+"3335" : "", 
+"3337" : "", 
+"S21STN" : "", 
+"PDF_PAGES" : "", 
+"SEARCH_STRING" : "", 
+"3500" : "", 
+"textPagesQuery" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0039\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"S21AllTRM" : "", 
+"S21ALL" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0032\u0039\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"end" : ""});
+      </script><div id="ctrl_give_out_count_VKR1_FULLTEXT_4306" style="font-size: 11px;"></div><div id="ctrl_digital_give_out_count_VKR1_FULLTEXT_4306" style="font-size: 11px;"></div> <div id="ctrl_others_link_container_VKR1_FULLTEXT_4306" style="display: none;">      <img border=0 width="25px" style="display: inline; vertical-align: middle;" src="/irbis64r_plus/images/books_ring.png">      <div id="ctrl_others_link_VKR1_FULLTEXT_4306" style="color: blue; cursor: pointer; font-size: 11px; display: inline; vertical-align: middle;"></div> </div><script>$(   function (currMFN) { return function()   {      var updated_value_count =          parseInt(            "0"               , 10);      var sumRating =          parseInt(            "0"               , 10);      var updated_average_rating = (updated_value_count > 0 ? sumRating / updated_value_count : 0);            var ratingBar = new RatingBar($("#ctrl_rating_VKR1_FULLTEXT_" + currMFN), undefined, "/irbis64r_plus/images/star-on.png", "/irbis64r_plus/images/star-off.png", "/irbis64r_plus/images/star-half.png");            lst_updateRating[currMFN] = function (rating, valueCount)         {            $("#ctrl_rating_value_VKR1_FULLTEXT_" + currMFN).text("Рейтинг издания: " + rating.toFixed(2));            ratingBar.showRatingBar(rating);            $("#ctrl_rating_valueCount_VKR1_FULLTEXT_" + currMFN).text((valueCount == 0 ? "(нет оценок)" : "(всего оценок: " + valueCount + ")"));         };               lst_updateRating[currMFN](updated_average_rating, updated_value_count);            var updated_digital_give_out_count =          parseInt(            "03"            , 10);            var updated_give_out_count =          parseInt(            "0"            , 10);            lst_updateGiveOut[currMFN] = function (digital_give_out_count, give_out_count)         {            if (give_out_count !== undefined)               $("#ctrl_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во книговыдач: " + give_out_count);            if (digital_give_out_count !== undefined)               $("#ctrl_digital_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во обращений к полному тексту: " + digital_give_out_count);         };            lst_updateGiveOut[currMFN](updated_digital_give_out_count, updated_give_out_count);   }}(currMFN));</script><table style="font-size: 11px;"> <tr>   <td><div id="ctrl_rating_value_VKR1_FULLTEXT_4306" /></td>   <td><div id="ctrl_rating_VKR1_FULLTEXT_4306" /></td>   <td><div id="ctrl_rating_valueCount_VKR1_FULLTEXT_4306" /></td> </tr> </table>         <div class="BottomCellN">         </div>      </td>   </tr></table><table style="width:100%;border:1px;font-size:11px;">   <tr width=100%>      <td with=5% valign="top">         <div id="search_result_VKR1_FULLTEXT_4307" style="display: inline;">         <input type="checkbox" id="ctrl_search_result_checkbox_VKR1_FULLTEXT_4307">         <b>5.</b>         </div>         <span>         <a title="Напечатать" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&P21DBN=VKR1&I21DBN=VKR1_PRINT&S21FMT=fullw_print&C21COM=F&Z21MFN=4307">         <img border=0 width=32 height=32  src="/irbis64r_plus/images/printer.jpg">         </a>         </span>      </td>            <td width=95%><img style="float:left; margin:10px; width:120px;" src="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=7&I21DBN=VKR1&P21DBN=VKR1&Image_file_name=%5C2024vkr%5C130f%2Epdf&Image_file_mfn=4307&FILE_PAGE=1"><table><tr align="right"><td width="95%"></td></tr></table><b> &nbsp;&nbsp;&nbsp;Ч44<br> &nbsp;&nbsp;&nbsp;П 278</b><b></b><br>&nbsp;&nbsp;&nbsp;  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9F%D0%B5%D1%80%D1%84%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B0%2C%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0%20%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%BD%D0%B0"><b>Перфильева, Александра Владимировна</b></a>. <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=M=&USES21ALL=1&S21STR="><b></b></a></b> <br>&nbsp;&nbsp;&nbsp; Развитие математических умений в процессе обучения робототехнике в <b><font color=red>дополнительном</font></b> <b><font color=red>образовании</font></b> : выпуск. квалификац. работа по образоват. прогр. "<b><font color=red>Педагог</font></b> доп. <b><font color=red>инженерно</font></b>-технолог. <b><font color=red>образования</font></b>" по направлению подгот. 44.04.01 "Пед. <b><font color=red>образование</font></b>" / авт. А. В. Перфильева ; науч. рук. О. А. Кириллова ; рец. М. Е. Козловских ; Шадр. гос. пед. ун-т, каф. физ.-мат. и информ.-технол. <b><font color=red>образования</font></b>. - Шадринск : [б. и.], 2023. - 88 с. : цв. - Загл. с титул. экрана. - Электрон. версия неопубл. док. - Доступ из ЭБ ШГПУ (БД ВКР), для зарегистрир. пользователей. - Библиогр.: с. 73-80 (58 назв.). - 0.00. - Текст : электронный.<br><b>УДК</b>&nbsp;&nbsp;<A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=U=&USES21ALL=1&S21STR=004%2E8">004.8</a>&nbsp;&nbsp;<br><b>ББК </b>Ч448.478<br><b>Рубрики: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%92%D1%8B%D1%81%D1%88%D0%B5%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2D%2D%20%D0%9F%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8%20%D0%B8%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Высшее <b><font color=red>образование</font></b>--Повышение квалификации и <b><font color=red>дополнительное</font></b> <b><font color=red>образование</font></b></a>,  <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21P03=S=&USES21ALL=1&S21STR=%D0%98%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0%20%2D%2D%20%D0%98%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82">Информатика--Искусственный интеллект</a><br><b>Кл.слова (ненормированные): </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95">ПЕДАГОГИЧЕСКОЕ <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=44%2E04%2E01">44.04.01</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%20%D0%B4%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%BD%D0%BE%2D%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><b><font color=red>педагог</font></b> <b><font color=red>дополнительного</font></b> <b><font color=red>инженерно</font></b>-<b><font color=red>технологического</font></b> <b><font color=red>образования</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%90%D0%93%D0%98%D0%A1%D0%A2%D0%A0%D0%90%D0%A2%D0%A3%D0%A0%D0%90">МАГИСТРАТУРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9E%D0%A7%D0%9D%D0%90%D0%AF%20%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">ОЧНАЯ ФОРМА ОБУЧЕНИЯ</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%92%D0%AB%D0%9F%D0%A3%D0%A1%D0%9A%D0%9D%D0%90%D0%AF%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%9E%D0%9D%D0%9D%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90%20%D0%9E%D0%9F%D0%AB%D0%A2%D0%9D%D0%9E%2D%D0%9F%D0%A0%D0%90%D0%9A%D0%A2%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%A5%D0%90%D0%A0%D0%90%D0%9A%D0%A2%D0%95%D0%A0%D0%90">ВЫПУСКНАЯ КВАЛИФИКАЦИОННАЯ РАБОТА ОПЫТНО-ПРАКТИЧЕСКОГО ХАРАКТЕРА</a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%98%D0%A1%D0%A1%D0%9B%D0%95%D0%94%D0%9E%D0%92%D0%90%D0%A2%D0%95%D0%9B%D0%AC%D0%A1%D0%9A%D0%90%D0%AF%20%D0%A0%D0%90%D0%91%D0%9E%D0%A2%D0%90">ИССЛЕДОВАТЕЛЬСКАЯ РАБОТА</a><br><b>Дескрипторы: </b><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95"><b><font color=red>ДОПОЛНИТЕЛЬНОЕ</font></b> <b><font color=red>ОБРАЗОВАНИЕ</font></b></a> -- <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=0&S21LOG=1&S21P03=K=&USES21ALL=1&S21STR=%D0%9C%D0%95%D0%A2%D0%9E%D0%94%D0%AB%20%D0%9E%D0%91%D0%A3%D0%A7%D0%95%D0%9D%D0%98%D0%AF">МЕТОДЫ ОБУЧЕНИЯ</a><br><b>Аннотация: </b>Цель исследования: разработка упражнений и методических рекомендаций к ним по развитию математических умений, применяемых в процессе обучения робототехнике в <b><font color=red>дополнительном</font></b> <b><font color=red>образовании</font></b>. Результат работы: Разработаны упражнения и методические рекомендации к ним для учащихся различных возрастных категорий, находящие применение в процессе обучения робототехнике.    <br><b> Доп.точки доступа: </b> <A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%D0%BB%D0%BE%D0%B2%D0%B0%2C%20%D0%9E%D0%BA%D1%81%D0%B0%D0%BD%D0%B0%20%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B2%D0%BD%D0%B0">Кириллова, Оксана Александровна \науч. рук.\; </a><A HREF="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21P01=0&S21P02=1&S21P03=A=&USES21ALL=1&S21STR=%D0%9A%D0%BE%D0%B7%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D1%85%2C%20%D0%9C%D0%B0%D1%80%D0%B8%D0%BD%D0%B0%20%D0%95%D0%B2%D0%B3%D0%B5%D0%BD%D1%8C%D0%B5%D0%B2%D0%BD%D0%B0">Козловских, Марина Евгеньевна \рец.\</a><script language="JavaScript">
+	function DropDown(it)
+	{
+		el1 = document.getElementById(it);
+		if(el1.style.display=="none") 
+		{
+			el1.style.display="block";
+		}
+		else
+		{
+			el1.style.display="none";
+		}
+	}
+ </script>  
+<br><br><div><a style="cursor: pointer; cursor: hand;color:blue;text-decoration:underline;" onclick="javascript:DropDown('EKZ745115');">Экземпляры</a><div style="display:none;" id="EKZ745115">
+<b> Всего:</b> 1, ЭБ (1)<br><b>Свободны: </b>ЭБ (1)</div></div><!><!><br>  </td>   </tr> </table>                   <!>                 <div id="ctrl_openPageViewer_VKR1_FULLTEXT_4307"                   title="Постраничный просмотр полного текста. "                   style="color: blue; cursor: pointer; font-size : 11px; display: inline;">Постраничный просмотр полного текста</div>                 <br> <!>                          <!><a title="display: none; Скачать полный текст" style="cursor: pointer; color: blue; font-size : 11px; text-decoration: none; display: block;">Нет прав на скачивание полного текста</a><!>   <script>      var currMFN = 4307;   srrs_VKR1_FULLTEXT.addRecord({
+"MFN" : currMFN, 
+"955" : "\u005E\u0041\u005C\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u005C\u0031\u0033\u0030\u0066\u002E\u0070\u0064\u0066\u005E\u004E\u0038\u0038\u005E\u0042\u0030\u0030\u0030\u0033|", 
+"1001" : "\u0031\u0031|", 
+"S21REF" : "\u0031\u0030|", 
+"2221" : "\u0056\u004B\u0052\u0031\u005F\u0046\u0055\u004C\u004C\u0054\u0045\u0058\u0054|", 
+"DB_NAME" : "VKR1|", 
+"IMAGE_FILE_NAME" : "\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0033\u0030\u0066\u0025\u0032\u0045\u0070\u0064\u0066|", 
+"Z21ID" : "\u0031\u0030\u0031\u0035\u0031\u0037\u0031\u0030\u0031\u0035\u0031\u0030\u0031\u0036\u0031\u0031\u0035\u0031\u0035\u0035\u0035\u0033\u0032|", 
+"3335" : "", 
+"3337" : "", 
+"S21STN" : "", 
+"PDF_PAGES" : "", 
+"SEARCH_STRING" : "", 
+"3500" : "", 
+"textPagesQuery" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0033\u0030\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"S21AllTRM" : "", 
+"S21ALL" : "\u003C\u002E\u003E\u0054\u0058\u0054\u003D\u0025\u0035\u0043\u0032\u0030\u0032\u0034\u0076\u006B\u0072\u0025\u0035\u0043\u0031\u0033\u0030\u0066\u005F\u005F\u0024\u003C\u002E\u003E|", 
+"end" : ""});
+      </script><div id="ctrl_give_out_count_VKR1_FULLTEXT_4307" style="font-size: 11px;"></div><div id="ctrl_digital_give_out_count_VKR1_FULLTEXT_4307" style="font-size: 11px;"></div> <div id="ctrl_others_link_container_VKR1_FULLTEXT_4307" style="display: none;">      <img border=0 width="25px" style="display: inline; vertical-align: middle;" src="/irbis64r_plus/images/books_ring.png">      <div id="ctrl_others_link_VKR1_FULLTEXT_4307" style="color: blue; cursor: pointer; font-size: 11px; display: inline; vertical-align: middle;"></div> </div><script>$(   function (currMFN) { return function()   {      var updated_value_count =          parseInt(            "0"               , 10);      var sumRating =          parseInt(            "0"               , 10);      var updated_average_rating = (updated_value_count > 0 ? sumRating / updated_value_count : 0);            var ratingBar = new RatingBar($("#ctrl_rating_VKR1_FULLTEXT_" + currMFN), undefined, "/irbis64r_plus/images/star-on.png", "/irbis64r_plus/images/star-off.png", "/irbis64r_plus/images/star-half.png");            lst_updateRating[currMFN] = function (rating, valueCount)         {            $("#ctrl_rating_value_VKR1_FULLTEXT_" + currMFN).text("Рейтинг издания: " + rating.toFixed(2));            ratingBar.showRatingBar(rating);            $("#ctrl_rating_valueCount_VKR1_FULLTEXT_" + currMFN).text((valueCount == 0 ? "(нет оценок)" : "(всего оценок: " + valueCount + ")"));         };               lst_updateRating[currMFN](updated_average_rating, updated_value_count);            var updated_digital_give_out_count =          parseInt(            "03"            , 10);            var updated_give_out_count =          parseInt(            "0"            , 10);            lst_updateGiveOut[currMFN] = function (digital_give_out_count, give_out_count)         {            if (give_out_count !== undefined)               $("#ctrl_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во книговыдач: " + give_out_count);            if (digital_give_out_count !== undefined)               $("#ctrl_digital_give_out_count_VKR1_FULLTEXT_" + currMFN).text("Кол-во обращений к полному тексту: " + digital_give_out_count);         };            lst_updateGiveOut[currMFN](updated_digital_give_out_count, updated_give_out_count);   }}(currMFN));</script><table style="font-size: 11px;"> <tr>   <td><div id="ctrl_rating_value_VKR1_FULLTEXT_4307" /></td>   <td><div id="ctrl_rating_VKR1_FULLTEXT_4307" /></td>   <td><div id="ctrl_rating_valueCount_VKR1_FULLTEXT_4307" /></td> </tr> </table>         <div class="BottomCellN">         </div>      </td>   </tr></table>
+
+
+<div id="ctrl_footerPortionLinksBar" style="height: 30px;"></div>
+
+</td></tr>
+
+<tr> <td colspan="4" align=left style="align:left;font-size: 11px; color: #999999"><span style="align:left;font-size: 11px; color: #999999">Распределение результатов поиска</span><table border=0 width=100% style="background-color: #EEEEEE;"><tr style="background-color: #E0E0E0;"><td style="text-align: left; font-size: 11px; color: blue;"><b>Автор</b></td><td style="text-align: left; font-size: 11px; color: blue;"><b>Год издания</b></td><td style="text-align: left; font-size: 11px; color: blue;"><b>Тематика (Предметные рубрики)</b></td></tr><tr><td  width=30%><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>A%3D%D0%9A%D0%9E%D0%97%D0%9B%D0%9E%D0%92%D0%A1%D0%9A%D0%98%D0%A5%2C%20%D0%9C%D0%90%D0%A0%D0%98%D0%9D%D0%90%20%D0%95%D0%92%D0%93%D0%95%D0%9D%D0%AC%D0%95%D0%92%D0%9D%D0%90%5C%D0%9D%D0%90%D0%A3%D0%A7%2E%20%D0%A0%D0%A3%D0%9A%2E%5C<.>)&USES21ALL=0">КОЗЛОВСКИХ, МАРИНА ЕВГЕНЬЕВНА\НАУЧ. РУК.\ (4)</a><br><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>A%3D%D0%A3%D0%A1%D0%A2%D0%98%D0%9D%D0%9E%D0%92%D0%90%2C%20%D0%9D%D0%90%D0%A2%D0%90%D0%9B%D0%AC%D0%AF%20%D0%9D%D0%98%D0%9A%D0%9E%D0%9B%D0%90%D0%95%D0%92%D0%9D%D0%90%5C%D0%A0%D0%95%D0%A6%2E%5C<.>)&USES21ALL=0">УСТИНОВА, НАТАЛЬЯ НИКОЛАЕВНА\РЕЦ.\ (2)</a><br><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>A%3D%D0%9A%D0%A3%D0%9B%D0%98%D0%9A%D0%9E%D0%92%D0%A1%D0%9A%D0%98%D0%A5%2C%20%D0%90%D0%9B%D0%81%D0%9D%D0%90%20%D0%AE%D0%A0%D0%AC%D0%95%D0%92%D0%9D%D0%90<.>)&USES21ALL=0">КУЛИКОВСКИХ, АЛЁНА ЮРЬЕВНА (1)</a><br><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>A%3D%D0%9A%D0%9E%D0%97%D0%9B%D0%9E%D0%92%D0%A1%D0%9A%D0%98%D0%A5%2C%20%D0%9C%D0%90%D0%A0%D0%98%D0%9D%D0%90%20%D0%95%D0%92%D0%93%D0%95%D0%9D%D0%AC%D0%95%D0%92%D0%9D%D0%90%5C%D0%A0%D0%95%D0%A6%2E%5C<.>)&USES21ALL=0">КОЗЛОВСКИХ, МАРИНА ЕВГЕНЬЕВНА\РЕЦ.\ (1)</a><br><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>A%3D%D0%9F%D0%95%D0%A0%D0%A4%D0%98%D0%9B%D0%AC%D0%95%D0%92%D0%90%2C%20%D0%90%D0%9B%D0%95%D0%9A%D0%A1%D0%90%D0%9D%D0%94%D0%A0%D0%90%20%D0%92%D0%9B%D0%90%D0%94%D0%98%D0%9C%D0%98%D0%A0%D0%9E%D0%92%D0%9D%D0%90<.>)&USES21ALL=0">ПЕРФИЛЬЕВА, АЛЕКСАНДРА ВЛАДИМИРОВНА (1)</a><br></td><td  width=30%><a style="border:0px;font-size:x-small;color:blue" href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>G%3D2023<.>)&USES21ALL=0">2023 (5)</a><br></td><td  width=40%><a style="border:0px;font-size:x-small;color:blue"  href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>S%3D%D0%92%D0%AB%D0%A1%D0%A8%D0%95%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95%20%2D%2D%20%D0%9F%D0%9E%D0%92%D0%AB%D0%A8%D0%95%D0%9D%D0%98%D0%95%20%D0%9A%D0%92%D0%90%D0%9B%D0%98%D0%A4%D0%98%D0%9A%D0%90%D0%A6%D0%98%D0%98%20%D0%98%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%95%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%95<.>)&USES21ALL=0">ВЫСШЕЕ ОБРАЗОВАНИЕ -- ПОВЫШЕНИЕ КВАЛИФИКАЦИИ И ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ (3)</a><br><a style="border:0px;font-size:x-small;color:blue"  href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>S%3D%D0%A4%D0%98%D0%97%D0%9A%D0%A3%D0%9B%D0%AC%D0%A2%D0%A3%D0%A0%D0%90%20%D0%98%20%D0%A1%D0%9F%D0%9E%D0%A0%D0%A2%20%2D%2D%20%D0%A8%D0%90%D0%A5%D0%9C%D0%90%D0%A2%D0%AB%2E%20%D0%A8%D0%90%D0%A8%D0%9A%D0%98<.>)&USES21ALL=0">ФИЗКУЛЬТУРА И СПОРТ -- ШАХМАТЫ. ШАШКИ (1)</a><br><a style="border:0px;font-size:x-small;color:blue"  href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?LNG=&Z21ID=10151710151016115155532&I21DBN=VKR1_FULLTEXT&P21DBN=VKR1&S21STN=1&S21REF=10&S21FMT=briefHTML_ft&C21COM=S&S21CNR=5&S21ALL=%28%3C%2E%3EK%3D%D0%9F%D0%95%D0%94%D0%90%D0%93%D0%9E%D0%93%20%D0%94%D0%9E%D0%9F%D0%9E%D0%9B%D0%9D%D0%98%D0%A2%D0%95%D0%9B%D0%AC%D0%9D%D0%9E%D0%93%D0%9E%20%D0%98%D0%9D%D0%96%D0%95%D0%9D%D0%95%D0%A0%D0%9D%D0%9E%2D%D0%A2%D0%95%D0%A5%D0%9D%D0%9E%D0%9B%D0%9E%D0%93%D0%98%D0%A7%D0%95%D0%A1%D0%9A%D0%9E%D0%93%D0%9E%20%D0%9E%D0%91%D0%A0%D0%90%D0%97%D0%9E%D0%92%D0%90%D0%9D%D0%98%D0%AF%3C%2E%3E%29*(<.>S%3D%D0%98%D0%9D%D0%A4%D0%9E%D0%A0%D0%9C%D0%90%D0%A2%D0%98%D0%9A%D0%90%20%2D%2D%20%D0%98%D0%A1%D0%9A%D0%A3%D0%A1%D0%A1%D0%A2%D0%92%D0%95%D0%9D%D0%9D%D0%AB%D0%99%20%D0%98%D0%9D%D0%A2%D0%95%D0%9B%D0%9B%D0%95%D0%9A%D0%A2<.>)&USES21ALL=0">ИНФОРМАТИКА -- ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ (1)</a><br></td></tr></table></td></tr>
+
+<tr><td>
+
+
+
+
+<br>
+<div class="SearchCell" style="border-bottom : 1px solid #73A2EF;">
+
+<table border=0 width="100%" background="/irbis64r_plus/images/searchbackground.gif">
+
+<tr><td style="text-align:left; font-size:12px;">   <b>Сохранить запрос как постоянный с именем</b></td><td style="text-align:right; font-size:12px;">
+
+
+<table style="width: 100%">
+<tr>
+<td width="100%">
+<input id="ctrl_saveQuery_query" type="text" title="Название запроса" style="width:100%" value=" (<.>K=ПЕДАГОГ ДОПОЛНИТЕЛЬНОГО ИНЖЕНЕРНО-ТЕХНОЛОГИЧЕСКОГО ОБРАЗОВАНИЯ<.>)">
+</td>
+<td>
+<input id="ctrl_saveQuery_button" type="button" value="Сохранить" title="Сохранить запрос" onclick="onclick_saveQuery();">
+</td>
+</tr>
+</table>
+
+<script>
+function onclick_saveQuery()
+{
+   $("#ctrl_saveQuery_query").attr('disabled','disabled');
+   $("#ctrl_saveQuery_button").attr('disabled','disabled');
+   
+   new WebIrbisSystem(CGI_PATH).uc_saveQuery(
+      "2000009030",
+      $("#ctrl_saveQuery_query").val(),
+      "",
+      "(<.>K=ПЕДАГОГ ДОПОЛНИТЕЛЬНОГО ИНЖЕНЕРНО-ТЕХНОЛОГИЧЕСКОГО ОБРАЗОВАНИЯ<.>)",
+      "20260622");
+}
+</script>
+</td></tr>
+
+<tr>
+<td  style="text-align:left; font-size:12px;">
+<b>Печать/Сохранение результатов поиска</b>
+</td>
+<td style="text-align:right; font-size:12px;">
+   <table style="width: 100%">
+   <tr>
+   <td width="100%">
+      <select class="inp1" id="SEL_TYPE" style="width:100%;">
+      <option value="1" selected="">все найденные</option>
+      <option value="2">отмеченные</option>     
+      <option value="3">кроме отмеченных</option>
+      </select>
+   </td>
+   <td>
+      <select class="inp1" id="S21SRW">
+      <option value="" selected="">без сортировки</option>
+      <option value="brief_tab"  >сортировка по заголовку </option>
+      <option value="GOD"  >сортировка по году издания </option>
+      <option value="tipvid">сортировка по типу/виду документа</option>
+      <option value="reg_data">сортировка по дате поступления</option>
+      </select>
+   </td>
+   <td>
+      <select class="inp1" id="S21FMT">
+      <option value="FULLW_print"  selected="" >полное описание </option>
+      <option value="briefweb"  selected="">краткое описание</option>
+      </select>
+   </td>
+   <td>
+      <script>
+         function onPrintSearchResult()
+         {
+				var max_count = webIrbisSettings["max_list_document_count"];
+				var all_count = parseInt("011", 10);
+				var count;
+				if ($("#SEL_TYPE").val() == 1) // если все найденные
+					count = all_count;
+				if ($("#SEL_TYPE").val() == 2) // если отмеченные
+					count = checkedControlsCount();
+				if ($("#SEL_TYPE").val() == 3) // если кроме отмеченных
+					count = all_count - checkedControlsCount();
+				if (count > max_count)
+					alert("Выбранная порция в " + count + " записей не может быть распечатана. На печать выведены первые " + max_count + " записей.");
+            new WebIrbisSystem(CGI_PATH).uc_printSearchResult($("#S21FMT").val(), $("#SEL_TYPE").val(), $("#S21SRW").val(), max_count);
+         }
+      </script>
+      <input type="submit" class="sub1"  value="Выполнить" onclick="onPrintSearchResult();">
+   </td>
+   </tr>
+   </table>
+</td>
+
+</tr>
+
+<tr>
+<td  style="text-align:left; font-size:12px;">
+<b>Показать список отмеченных документов</b>
+</td>
+<td style="text-align:right; font-size:12px;">
+   <table style="width: 100%">
+   <tr>
+   <td width="100%">
+   </td>
+   <td>
+   </td>
+   <td>
+      <select class="inp1" id="S21SRW_2">
+      <option value="" selected="">без сортировки</option>
+      <option value="brief_tab"  >сортировка по заголовку </option>
+      <option value="GOD"  >сортировка по году издания </option>
+      <option value="tipvid">сортировка по типу/виду документа</option>
+      <option value="reg_data">сортировка по дате поступления</option>
+      </select>
+   </td>
+   <td>
+      <script>
+         function onShowCheckedBookLst()
+         {
+            new WebIrbisSystem(CGI_PATH).uc_showCheckedBookLst($("#S21SRW_2").val(), webIrbisSettings["max_list_document_count"]);
+         }
+      </script>
+      <input type="submit" class="sub1"  value="Выполнить" onclick="onShowCheckedBookLst();">
+   </td>
+   </tr>
+   </table>
+</td>
+
+</tr>
+
+</table>
+</div>
+
+</td></tr>
+
+<tr><td>
+   <div>
+      <br>
+      <div id="ctrl_side_search_panel_header" style="display: none;">Найдено в других библиотеках:</div>
+      <div id="ctrl_side_search_panel"></div>
+   </div>
+
+   <script language="JavaScript">
+   if ("true" == "true")
+   {
+      $(
+         function() 
+         {
+            var rs = new IrbisRecordSet();
+            rs.addRecord({
+               "MFN" : 1,
+               "name" : "",
+               "settings" : "",
+               "end" : ""});
+            
+            new WebIrbisSystem(CGI_PATH).initializeSideSearchPanel($("#ctrl_side_search_panel_header"), $("#ctrl_side_search_panel"), rs.getIrbisRecord(1));
+         });
+   }
+   </script>
+   
+   <div>
+      <br/>
+      <br/>
+      <footer class="footer">
+
+<center>
+   <a style="text-decoration : none; font-size: 10pt;" target=_blank href="/cgi-bin/irbis64r_plus/cgiirbis_64_ft.exe?C21COM=F&I21DBN=STAT&P21DBN=LOGDB&Z21ID=10151710151016115155532"> Статистика обращений</a>
+</center>
+
+         <div class="container">
+   Copyright © 2018 ИРБИС64+ Электронная библиотека. Все права защищены.
+         </div>
+      </footer>
+   </div>
+</td></tr>
+
+</table>
+
+</body>
+</html>
